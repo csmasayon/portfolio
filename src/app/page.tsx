@@ -63,7 +63,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center sm:justify-center order-1 md:order-2">
               <Image
-                src="/images/portrait.png"
+                src="/images/portrait.PNG"
                 alt="Christian Ace Masayon"
                 width={250}
                 height={250}
