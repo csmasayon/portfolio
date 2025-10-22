@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Christian Ace Masayon - Fullstack Developer & UX Designer",
+    default: "Christian Ace Masayon - Fullstack Web Developer | UX & UI Designer",
     template: "%s | Christian Ace Masayon"
   },
   description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development with MERN stack and user-centered UI/UX design. Based in Tagum City, Philippines.",
