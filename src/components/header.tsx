@@ -4,7 +4,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b px-4 py-3">
+    <header className="flex justify-between items-center sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b px-4 py-3 ">
       <div className="flex items-center ">
         <h1 className="text-lg font-semibold">csmasayon</h1>
       </div>
@@ -30,14 +30,6 @@ export default function Header() {
                 className="hover:text-primary transition-colors"
               >
                 projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/experiences"
-                className="hover:text-primary transition-colors"
-              >
-                experiences
               </Link>
             </li>
           </ul>

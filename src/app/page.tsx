@@ -17,14 +17,29 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import {
+  NextjsIcon,
+  ReactIcon,
+  NodeIcon,
+  MongodbIcon,
+  MysqlIcon,
+  TailwindIcon,
+  FigmaIcon,
+  GitIcon,
+  GitHubIcon,
+  FirebaseIcon,
+  PythonIcon,
+  TypeScriptIcon,
+  JavaScriptIcon,
+  HtmlIcon,
+  CssIcon,
+  AWSIcon,
+} from "@/components/svg/icons";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <div className="max-w-4xl mt-4 mb-4 sm:mt-8 sm:mb-8 lg:mx-auto space-y-8 mx-4">
+      <div className="max-w-4xl mt-4 sm:mt-8 sm:mb-8 lg:mx-auto sm:mx-auto space-y-8 mx-4">
         <section id="home" className="mb-2 mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
             <div className="flex flex-col gap-1 order-2 md:order-1">
@@ -32,10 +47,10 @@ export default function Home() {
                 Christian Ace Masayon
               </h1>
               <h2 className="scroll-m-20 text-lg sm:text-xl text-center sm:text-left  font-semibold tracking-tight text-balance">
-                Fullstack Web Developer | UX & UI Designer
+                I am a fullstack web developer and a UX & UI designer.
               </h2>
               <h3 className="scroll-m-20 text-base sm:text-xl text-center sm:text-left  font-normal tracking-tight text-balance">
-                Tagum City, Davao del Norte, Philippines
+                Based in Tagum City, Davao del Norte, Philippines
               </h3>
               <a href="/docs/MASAYON-Resume.pdf" target="_blank">
                 <Button size="lg" className="w-full sm:w-auto">
@@ -105,6 +120,72 @@ export default function Home() {
               Skills
             </h2>
           </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-2">
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <NextjsIcon className="w-6 h-6" />
+              <h2>Next.js</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <ReactIcon className="w-6 h-6" />
+              <h2>React</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <NodeIcon className="w-6 h-6" />
+              <h2>Node.js</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <TailwindIcon className="w-6 h-6" />
+              <h2>Tailwind CSS</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <MongodbIcon className="w-6 h-6" />
+              <h2>MongoDB</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <MysqlIcon className="w-6 h-6" />
+              <h2>MySQL</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <FirebaseIcon className="w-6 h-6" />
+              <h2>Firebase</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <AWSIcon className="w-6 h-6" />
+              <h2>AWS</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <PythonIcon className="w-6 h-6" />
+              <h2>Python</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <TypeScriptIcon className="w-6 h-6" />
+              <h2>TypeScript</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <JavaScriptIcon className="w-6 h-6" />
+              <h2>JavaScript</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <HtmlIcon className="w-6 h-6" />
+              <h2>HTML</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <CssIcon className="w-6 h-6" />
+              <h2>CSS</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <FigmaIcon className="w-6 h-6" />
+              <h2>Figma</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <GitIcon className="w-6 h-6" />
+              <h2>Git</h2>
+            </div>
+            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
+              <GitHubIcon className="w-6 h-6" />
+              <h2>GitHub</h2>
+            </div>
+          </div>
         </section>
 
         <section id="education">
@@ -152,7 +233,14 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex flex-col gap-3">
+                      <Image
+                        src="/images/trabahanap.png"
+                        alt="TrabaHanap"
+                        width={250}
+                        height={250}
+                        className="rounded-xl mx-auto"
+                      />
+                      <div className="flex flex-col gap-3 mt-4">
                         <p className="text-justify">
                           TrabaHanap is a job-matching mobile application that
                           minimizes the Philippines&apos; underlying
@@ -197,40 +285,49 @@ export default function Home() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="outline">NextJS</Badge>
-                        <Badge variant="outline">React</Badge>
-                        <Badge variant="outline">Express</Badge>
-                        <Badge variant="outline">TypeScript</Badge>
-                        <Badge variant="outline">Node.js</Badge>
-                        <Badge variant="outline">Tailwind CSS</Badge>
-                        <Badge variant="outline">Strava API</Badge>
-                      </div>
+                      <Image
+                        src="/images/pfats.png"
+                        alt="Physical Fitness Activity Tracker System"
+                        width={500}
+                        height={500}
+                        className="rounded-xl"
+                      />
                     </CardContent>
-                    <CardFooter>
-                      <div className="flex gap-2">
-                        <a href="https://pfats.vercel.app" target="_blank">
-                          <ExternalLink />
-                        </a>
-                        <a
-                          href="https://github.com/csmasayon/pfats"
-                          target="_blank"
-                        >
-                          {" "}
-                          <Github />
-                        </a>
+                    <CardFooter className="flex flex-col gap-4 items-start">
+                      <div>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline">NextJS</Badge>
+                          <Badge variant="outline">React</Badge>
+                          <Badge variant="outline">Express</Badge>
+                          <Badge variant="outline">TypeScript</Badge>
+                          <Badge variant="outline">Node.js</Badge>
+                          <Badge variant="outline">Tailwind CSS</Badge>
+                          <Badge variant="outline">Strava API</Badge>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex gap-2 justify-start">
+                          <a href="https://pfats.vercel.app" target="_blank">
+                            <ExternalLink />
+                          </a>
+                          <a
+                            href="https://github.com/csmasayon/pfats"
+                            target="_blank"
+                          >
+                            {" "}
+                            <Github />
+                          </a>
+                        </div>
                       </div>
                     </CardFooter>
                   </Card>
                 </CarouselItem>
               </CarouselContent>
-              <CarouselPrevious className="hidden lg:block" />
-              <CarouselNext className="hidden lg:block" />
+              <CarouselPrevious className="hidden lg:flex" />
+              <CarouselNext className="hidden lg:flex" />
             </Carousel>
           </div>
         </section>
-
-        <Footer />
       </div>
     </div>
   );

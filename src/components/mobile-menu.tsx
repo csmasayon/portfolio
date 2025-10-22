@@ -56,15 +56,11 @@ export function MobileMenu() {
                   <li>
                     <Link href="/projects">projects</Link>
                   </li>
-                  <li>
-                    <Link href="/experiences">experiences</Link>
-                  </li>
                 </ul>
               </nav>
 
               <div className="pt-8 border-t">
                 <div className="flex items-center justify-center gap-3">
-                  <span className="text-sm text-muted-foreground">Theme:</span>
                   <ThemeToggle />
                 </div>
               </div>
