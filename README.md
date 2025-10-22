@@ -16,22 +16,22 @@ A modern, responsive portfolio website built with Next.js, showcasing the work a
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 15.5.6** - React framework with App Router
-- **React 19.1.0** - UI library
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
+- **Next.js 15.5.6**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide React**
 
 ### UI Components
-- **Radix UI** - Accessible component primitives
-- **Class Variance Authority** - Component variant management
-- **Tailwind Merge** - Utility class merging
+- **Radix UI**
+- **Class Variance Authority** 
+- **Tailwind Merge**
 
 ### Development Tools
-- **ESLint** - Code linting
-- **PostCSS** - CSS processing
-- **Next Themes** - Theme management
+- **ESLint**
+- **PostCSS**
+- **Next Themes**
 
 ## 📁 Project Structure
 
@@ -45,6 +45,7 @@ portfolio/
 │   │   ├── layout.tsx         # Root layout
 │   │   └── page.tsx           # Home page
 │   ├── components/            # Reusable components
+│   │   ├── svg/               # SVG icons
 │   │   ├── ui/                # UI components (Button, Card, etc.)
 │   │   ├── header.tsx         # Navigation header
 │   │   ├── mobile-menu.tsx    # Mobile navigation
