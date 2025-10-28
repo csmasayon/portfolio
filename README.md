@@ -87,13 +87,6 @@ portfolio/
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 
-## 📞 Contact
-
-**Christian Ace Masayon**
-- Fullstack Web Developer
-- UX/UI Designer
-- Based in Tagum City, Davao del Norte, Philippines
-
 ## 📄 License
 
 This project is private and for portfolio purposes.
