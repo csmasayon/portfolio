@@ -47,32 +47,35 @@ export default function Projects() {
                       <Image
                         src="/images/somup.png"
                         alt="UP Mindanao School of Management Website"
-                        width={750}
-                        height={750}
-                        className="rounded-xl mx-auto"
+                        width={625}
+                        height={625}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                     <CarouselItem>
                       <Image
                         src="/images/somup2.png"
-                        alt="UP Mindanao School of Management Website BS Agribusiness Economics Program Page"
-                        width={750}
-                        height={750}
-                        className="rounded-xl mx-auto"
+                        alt="UP Mindanao School of Management Website"
+                        width={625}
+                        height={625}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                     <CarouselItem>
                       <Image
                         src="/images/somup3.png"
-                        alt="UP Mindanao School of Management Website SOM About Us Page"
-                        width={750}
-                        height={750}
-                        className="rounded-xl mx-auto"
+                        alt="UP Mindanao School of Management Website"
+                        width={625}
+                        height={625}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                   </CarouselContent>
-                  <CarouselPrevious className="hidden lg:flex ml-12" />
-                  <CarouselNext className="hidden lg:flex mr-12" />
+                  <CarouselPrevious className="hidden lg:flex ml-14" />
+                  <CarouselNext className="hidden lg:flex mr-14" />
                 </Carousel>
                 <div className="flex flex-col gap-3 mt-4">
                   <p className="text-justify">
@@ -127,41 +130,44 @@ export default function Projects() {
                       <Image
                         src="/images/1.png"
                         alt="TrabaHanap"
-                        width={250}
-                        height={250}
-                        className="rounded-xl mx-auto"
+                        width={200}
+                        height={200}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                     <CarouselItem>
                       <Image
                         src="/images/2.png"
                         alt="TrabaHanap"
-                        width={250}
-                        height={250}
-                        className="rounded-xl mx-auto"
+                        width={200}
+                        height={200}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                     <CarouselItem>
                       <Image
                         src="/images/3.png"
                         alt="TrabaHanap"
-                        width={250}
-                        height={250}
-                        className="rounded-xl mx-auto"
+                        width={200}
+                        height={200}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
                       />
                     </CarouselItem>
                     <CarouselItem>
                       <Image
                         src="/images/4.png"
                         alt="TrabaHanap"
-                        width={250}
-                        height={250}
-                        className="rounded-xl mx-auto"
+                        width={200}
+                        height={200}
+                        className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
+                        loading="lazy"
                       />
                     </CarouselItem>
                   </CarouselContent>
-                  <CarouselPrevious className="hidden lg:flex ml-12" />
-                  <CarouselNext className="hidden lg:flex mr-12" />
+                  <CarouselPrevious className="hidden lg:flex ml-14" />
+                  <CarouselNext className="hidden lg:flex mr-14" />
                 </Carousel>
                 <div className="flex flex-col gap-3 mt-4">
                   <p className="text-justify">
@@ -207,7 +213,7 @@ export default function Projects() {
                   alt="Physical Fitness Activity Tracker System"
                   width={700}
                   height={700}
-                  className="rounded-xl mx-auto w-full h-full object-cover"
+                  className="rounded-xl mx-auto w-auto h-auto max-w-full object-contain"
                 />
               </CardContent>
               <CardFooter className="flex flex-col gap-4 items-start">

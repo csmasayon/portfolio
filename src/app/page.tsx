@@ -224,10 +224,10 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-2">
-            <Carousel>
-              <CarouselContent>
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-2 md:-ml-4">
                 <CarouselItem className="md:basis-1/2 lg:basis-1/2">
-                  <Card>
+                  <Card className="h-full flex flex-col">
                     <CardHeader>
                       <CardTitle>
                         UP Mindanao School of Management Website
@@ -286,7 +286,7 @@ export default function Home() {
                   </Card>
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/2">
-                  <Card>
+                  <Card className="h-full flex flex-col">
                     <CardHeader>
                       <CardTitle>TrabaHanap</CardTitle>
                       <CardDescription>
@@ -336,7 +336,7 @@ export default function Home() {
                   </Card>
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/2">
-                  <Card>
+                  <Card className="h-full flex flex-col">
                     <CardHeader>
                       <CardTitle>
                         Physical Fitness Activity Tracker System
