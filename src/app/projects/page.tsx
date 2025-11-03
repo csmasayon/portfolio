@@ -35,6 +35,86 @@ export default function Projects() {
           <div className="flex flex-col gap-4">
             <Card>
               <CardHeader>
+                <CardTitle>UP Mindanao School of Management Website</CardTitle>
+                <CardDescription>
+                  A website for UP Mindanao&apos;s School of Management
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <Image
+                        src="/images/somup.png"
+                        alt="UP Mindanao School of Management Website"
+                        width={750}
+                        height={750}
+                        className="rounded-xl mx-auto"
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <Image
+                        src="/images/somup2.png"
+                        alt="UP Mindanao School of Management Website BS Agribusiness Economics Program Page"
+                        width={750}
+                        height={750}
+                        className="rounded-xl mx-auto"
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <Image
+                        src="/images/somup3.png"
+                        alt="UP Mindanao School of Management Website SOM About Us Page"
+                        width={750}
+                        height={750}
+                        className="rounded-xl mx-auto"
+                      />
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="hidden lg:flex ml-12" />
+                  <CarouselNext className="hidden lg:flex mr-12" />
+                </Carousel>
+                <div className="flex flex-col gap-3 mt-4">
+                  <p className="text-justify">
+                    I created and deployed the UP Mindanao School of Management
+                    website with comprehensive information on personnel, program
+                    offerings, and activities to ensure accessibility and
+                    relevance. I also developed dedicated pages for the SOM
+                    College Secretary&apos;s services, streamlining access to
+                    essential resources and improving user experience.
+                    Additionally, I trained faculty and administrative staff,
+                    equipping them with the skills to maintain and update the
+                    site for long-term sustainability.
+                  </p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col gap-4 items-start">
+                <div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">WordPress</Badge>
+                    <Badge variant="outline">Elementor</Badge>
+                    <Badge variant="outline">PHP</Badge>
+                    <Badge variant="outline">Amazon Lightsail</Badge>
+                    <Badge variant="outline">AWS</Badge>
+                    <Badge variant="outline">NGINX</Badge>
+                    <Badge variant="outline">Ubuntu</Badge>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex gap-2 justify-start">
+                    <a
+                      href="https://som.upmin.edu.ph"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink />
+                    </a>
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
                 <CardTitle>TrabaHanap</CardTitle>
                 <CardDescription>
                   A job-matching mobile application
@@ -99,67 +179,70 @@ export default function Projects() {
                     of the Philippines Mindanao (2024) and placed 2nd runner-up
                     in QBO Innovation&apos;s QOMPETE 2024 startup competition.
                   </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">MongoDB</Badge>
-                    <Badge variant="outline">Express</Badge>
-                    <Badge variant="outline">React Native</Badge>
-                    <Badge variant="outline">Node.js</Badge>
-                    <Badge variant="outline">Figma</Badge>
-                    <Badge variant="outline">Tailwind CSS</Badge>
-                    <Badge variant="outline">TypeScript</Badge>
-                  </div>
                 </div>
               </CardContent>
+              <CardFooter className="flex flex-col gap-4 items-start">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="outline">MongoDB</Badge>
+                  <Badge variant="outline">Express</Badge>
+                  <Badge variant="outline">React Native</Badge>
+                  <Badge variant="outline">Node.js</Badge>
+                  <Badge variant="outline">Figma</Badge>
+                  <Badge variant="outline">Tailwind CSS</Badge>
+                  <Badge variant="outline">TypeScript</Badge>
+                </div>
+              </CardFooter>
             </Card>
-
             <Card>
-                    <CardHeader>
-                      <CardTitle>
-                        Physical Fitness Activity Tracker System
-                      </CardTitle>
-                      <CardDescription>
-                        A physical fitness activity tracker system using the
-                        Strava API
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Image
-                        src="/images/pfats.png"
-                        alt="Physical Fitness Activity Tracker System"
-                        width={700}
-                        height={700}
-                        className="rounded-xl mx-auto w-full h-full object-cover"
-                      />
-                    </CardContent>
-                    <CardFooter className="flex flex-col gap-4 items-start">
-                      <div>
-                        <div className="flex flex-wrap gap-2">
-                          <Badge variant="outline">NextJS</Badge>
-                          <Badge variant="outline">React</Badge>
-                          <Badge variant="outline">Express</Badge>
-                          <Badge variant="outline">TypeScript</Badge>
-                          <Badge variant="outline">Node.js</Badge>
-                          <Badge variant="outline">Tailwind CSS</Badge>
-                          <Badge variant="outline">Strava API</Badge>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex gap-2 justify-start">
-                          <a href="https://pfats.vercel.app" target="_blank">
-                            <ExternalLink />
-                          </a>
-                          <a
-                            href="https://github.com/csmasayon/pfats"
-                            target="_blank"
-                          >
-                            {" "}
-                            <Github />
-                          </a>
-                        </div>
-                      </div>
-                    </CardFooter>
-                  </Card>
+              <CardHeader>
+                <CardTitle>Physical Fitness Activity Tracker System</CardTitle>
+                <CardDescription>
+                  A physical fitness activity tracker system using the Strava
+                  API
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src="/images/pfats.png"
+                  alt="Physical Fitness Activity Tracker System"
+                  width={700}
+                  height={700}
+                  className="rounded-xl mx-auto w-full h-full object-cover"
+                />
+              </CardContent>
+              <CardFooter className="flex flex-col gap-4 items-start">
+                <div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">NextJS</Badge>
+                    <Badge variant="outline">React</Badge>
+                    <Badge variant="outline">Express</Badge>
+                    <Badge variant="outline">TypeScript</Badge>
+                    <Badge variant="outline">Node.js</Badge>
+                    <Badge variant="outline">Tailwind CSS</Badge>
+                    <Badge variant="outline">Strava API</Badge>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex gap-2 justify-start">
+                    <a
+                      href="https://pfats.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink />
+                    </a>
+                    <a
+                      href="https://github.com/csmasayon/pfats"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {" "}
+                      <Github />
+                    </a>
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
           </div>
         </section>
       </div>
