@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b px-4 py-3 ">
       <div className="flex items-center ">
-        <h1 className="text-lg font-semibold">csmasayon</h1>
+        <Link href="/" className="text-lg font-semibold hover:text-primary transition-colors">Christian Ace Masayon</Link>
       </div>
       <div className="flex items-center gap-4">
         <nav className="hidden lg:flex items-center gap-2">

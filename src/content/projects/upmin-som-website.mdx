@@ -1,0 +1,61 @@
+export const metadata = {
+  title: "University of the Philippines Mindanao School of Management Website",
+  description: "A website for UP Mindanao's School of Management",
+  date: "2025-11-10",
+  tags: ["WordPress", "Elementor", "PHP", "Amazon Lightsail", "AWS", "NGINX", "Ubuntu"],
+  image: "/images/somup.png",
+  imageAlt: "UP Mindanao School of Management Website",
+  summary: "Discussion about the development of the website for UP Mindanao's School of Management",
+};
+
+import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import Link from "next/link";
+
+# University of the Philippines Mindanao School of Management Website
+
+## November 2024 - December 2024
+
+### [https://som.upmin.edu.ph](https://som.upmin.edu.ph)
+
+<div className="flex flex-wrap gap-2 my-4">
+  <Badge variant="outline">WordPress</Badge>
+  <Badge variant="outline">Elementor</Badge>
+  <Badge variant="outline">PHP</Badge>
+  <Badge variant="outline">Amazon Lightsail</Badge>
+  <Badge variant="outline">AWS</Badge>
+  <Badge variant="outline">NGINX</Badge>
+  <Badge variant="outline">Ubuntu</Badge>
+</div>
+
+<Separator className="my-4" />
+
+<Image placeholder="empty" className="mx-auto mb-4" src="/images/somup.png" alt="UP Mindanao School of Management Website" width={1000} height={1000} />
+
+The initial goal was to improve the existing website, which was originally created using Google Sites. However, due to the platform’s limitations and the specific features required by the School of Management,
+I decided to develop a new website using WordPress and Elementor.
+
+The website was designed to:
+- Provide clear and concise information about the programs and courses offered by the School of Management.
+- Enable students and visitors to easily access the Office of the College Secretary’s services, such as forms for leave of absence, graduation, record requests, and more.
+- Serve as a platform for the School of Management to share announcements, events, activities, accomplishments, and other updates.
+- Showcase information about the School’s faculty and staff, including their current research projects and publications.
+
+<Image placeholder="empty" className="mx-auto mt-8 mb-4" src="/images/somup2.png" alt="UP Mindanao School of Management BS Agribuisness Economics Program" width={1000} height={1000} />
+<div className="text-center -mt-4 mb-4">*BS Agribusiness Economics Program of the UP Mindanao School of Management*</div>
+
+There was no concrete timeline for the project, since the project needed to be changed and updated as the project progressed.
+Thus, the project took approximately more than a week to plan, and the implementation took the whole month of November.
+The final week of the project (December) was spent on finalizing the website and training the Office of the College Secretary on how to maintain and update the website, including teaching them how to use WordPress and Elementor.
+
+In whole, this project helped me to understand how to deploy a WordPress website using Amazon Lightsail and it helped me to
+improve my skills in using the command line and working with the terminal, as I had to use Ubuntu to configure NGINX,
+set-up the SSL certificate, and further configure the web server to make it secure and automatically update.

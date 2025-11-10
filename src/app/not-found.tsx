@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home } from "lucide-react";
+import { Home, Mail } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -15,6 +15,10 @@ export default function NotFound() {
             <p className="text-muted-foreground">
               Sorry, we couldn&apos;t find the page you&apos;re looking for.
             </p>
+
+            <p className="text-muted-foreground">
+              Contact me if you think this is an error.
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -24,10 +28,6 @@ export default function NotFound() {
                 Go Home
               </Link>
             </Button>
-          </div>
-
-          <div className="pt-8 text-sm text-muted-foreground">
-            <p>If you think this is an error, please contact me.</p>
           </div>
         </div>
       </div>

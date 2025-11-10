@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -136,5 +137,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    scroll-padding-top: 80px;
   }
 }

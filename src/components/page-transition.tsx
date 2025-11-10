@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 export default function PageTransition({
   children,
@@ -9,6 +10,27 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // Get the current URL hash
+    const hash = window.location.hash;
+    
+    // If there's no hash, scroll to top
+    // If there's a hash, let the browser handle it (scroll-padding-top will account for header)
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    } else {
+      // Small delay to ensure the page has rendered, then scroll to hash
+      // The browser will automatically account for scroll-padding-top
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [pathname, searchParams]);
 
   return (
     <motion.div

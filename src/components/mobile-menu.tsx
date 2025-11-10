@@ -48,9 +48,6 @@ export function MobileMenu() {
               <nav>
                 <ul className="space-y-6">
                   <li>
-                    <Link href="/" onClick={toggleMenu}>home</Link>
-                  </li>
-                  <li>
                     <Link href="/about" onClick={toggleMenu}>about</Link>
                   </li>
                   <li>
