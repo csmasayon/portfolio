@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import PageTransition from "@/components/page-transition";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -71,7 +72,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <PageTransition>{children}</PageTransition>
+          <Suspense fallback={<div className="min-h-screen">{children}</div>}>
+            <PageTransition>{children}</PageTransition>
+          </Suspense>
           <Footer />
         </ThemeProvider>
       </body>
