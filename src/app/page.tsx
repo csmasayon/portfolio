@@ -253,8 +253,8 @@ export default function Home() {
         </section>
 
         <section id="projects">
-          <div className="mb-2 mt-8">
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight">
+          <div>
+            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
               Highlighted Projects
             </h2>
           </div>
