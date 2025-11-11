@@ -12,24 +12,19 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-2">
           <ul className="flex gap-6">
             <li>
-              <Link href="/" className="hover:text-primary transition-colors">
-                home
-              </Link>
-            </li>
-            <li>
               <Link
                 href="/about"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary font-semibold transition-colors"
               >
-                about
+                About
               </Link>
             </li>
             <li>
               <Link
                 href="/projects"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary font-semibold transition-colors"
               >
-                projects
+                Projects
               </Link>
             </li>
           </ul>

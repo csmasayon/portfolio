@@ -29,29 +29,32 @@ export default function Projects() {
               <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance">
                 Projects
               </h1>
+              <p className="text-muted-foreground text-justify text-lg min-h-4">
+                These projects showcase my skills in various frameworks and programming languages, alongside solving real-world problems.
+              </p>
             </div>
           </div>
         </section>
 
         <section id="projects-list">
           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>UP Mindanao School of Management Website</CardTitle>
-                <CardDescription>
-                  A website for UP Mindanao&apos;s School of Management
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/somup.png"
                   alt="UP Mindanao School of Management Website"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  UP Mindanao School of Management Website
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A website for UP Mindanao's School of Management
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">WordPress</Badge>
                   <Badge variant="outline">Elementor</Badge>
@@ -61,40 +64,39 @@ export default function Projects() {
                   <Badge variant="outline">NGINX</Badge>
                   <Badge variant="outline">Ubuntu</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/upmin-som-website">Read more</Link>
                   </Button>
                   <Button size="icon" asChild>
-                    <a
+                    <Link
                       href="https://som.upmin.edu.ph"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <ExternalLink />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
-
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>TrabaHanap</CardTitle>
-                <CardDescription>
-                  A job-matching mobile application
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+              </div>
+            </div>
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/trabahanap.png"
                   alt="TrabaHanap"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  TrabaHanap
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A job-matching mobile application
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">MongoDB</Badge>
                   <Badge variant="outline">Express</Badge>
@@ -105,32 +107,31 @@ export default function Projects() {
                   <Badge variant="outline">Tailwind CSS</Badge>
                   <Badge variant="outline">TypeScript</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/trabahanap">Read more</Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
-
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>Physical Fitness Activity Tracker System</CardTitle>
-                <CardDescription>
-                  A physical fitness activity tracker system using the Strava
-                  API
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+              </div>
+            </div>
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/pfats.png"
                   alt="Physical Fitness Activity Tracker System"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  Physical Fitness Activity Tracker System
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A physical fitness activity tracker system using the Strava
+                  API
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">NextJS</Badge>
                   <Badge variant="outline">React</Badge>
@@ -140,7 +141,7 @@ export default function Projects() {
                   <Badge variant="outline">Tailwind CSS</Badge>
                   <Badge variant="outline">Strava API</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/pfats">Read more</Link>
                   </Button>
@@ -163,8 +164,8 @@ export default function Projects() {
                     </Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           </div>
         </section>
       </div>

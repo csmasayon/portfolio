@@ -1,11 +1,6 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import {
-  Download,
-  Linkedin,
-  Github,
-  Mail,
-  ExternalLink,
-} from "lucide-react";
+import { Download, Linkedin, Github, Mail, ExternalLink } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -15,13 +10,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
 import Image from "next/image";
 import {
   NextjsIcon,
@@ -42,54 +30,113 @@ import {
   AWSIcon,
 } from "@/components/svg/icons";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const roles = ["fullstack web developer.", "UX & UI designer."];
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = roles[currentRoleIndex];
+    const typingSpeed = isDeleting ? 30 : 50; // Faster when deleting
+    const pauseAfterComplete = 3000; // Pause before switching
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && charIndex < currentText.length) {
+        setDisplayedText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      } else if (!isDeleting && charIndex === currentText.length) {
+        setTimeout(() => {
+          setIsDeleting(true);
+        }, pauseAfterComplete);
+      } else if (isDeleting && charIndex > 0) {
+        setDisplayedText(currentText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      } else if (isDeleting && charIndex === 0) {
+        setIsDeleting(false);
+        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, currentRoleIndex, roles]);
+
   return (
     <div>
       <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 lg:mx-auto sm:mx-auto space-y-8 mx-4">
-        <section id="home" className="mb-2 mt-8">
+        <section id="home" className="py-8 sm:py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
             <div className="flex flex-col gap-1 order-2 md:order-1 items-center md:items-start">
               <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance">
-                Christian Ace Masayon
+                Hi, I&apos;m Christian Ace Masayon.
               </h1>
               <h2 className="scroll-m-20 text-lg sm:text-xl text-center sm:text-left  font-semibold tracking-tight text-balance">
-                I am a fullstack web developer and a UX & UI designer.
+                I&apos;m a{" "}
+                <motion.span
+                  key={currentRoleIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1 }}
+                  className="inline-block"
+                >
+                  {displayedText}
+                </motion.span>
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ duration: 0.9, repeat: Infinity }}
+                  className="inline-block ml-1"
+                >
+                  {"|"}
+                </motion.span>
               </h2>
-              <h3 className="scroll-m-20 text-base sm:text-xl text-center sm:text-left  font-normal tracking-tight text-balance">
+              <h3 className="scroll-m-20 text-base sm:text-large text-justify font-normal tracking-tight text-balance text-muted-foreground">
                 Based in Tagum City, Davao del Norte, Philippines
               </h3>
-
-              <Button size="lg" asChild>
-                <a
-                  href="/docs/MASAYON-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                >
-                  <Download />
-                  Download CV
-                </a>
-              </Button>
-
+              <h3 className="scroll-m-20 text-base sm:text-large text-justify font-normal tracking-tight text-balance">
+                I create intuitive user interfaces, and ensure seamless user
+                experiences across platforms. I&apos;m also adept at working in
+                agile environments and collaborating across teams. In my free
+                time, I enjoy creating music and exploring new technologies.
+              </h3>
               <div className="flex gap-2 mt-2 justify-center sm:justify-start">
-                <a
-                  href="https://www.linkedin.com/in/christian-ace-masayon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin />
-                </a>
-                <a
-                  href="https://github.com/christian-ace-masayon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github />
-                </a>
-                <a href="mailto:casmasayon@gmail.com" target="_blank">
-                  <Mail />
-                </a>
+                <Button size="lg" asChild>
+                  <Link
+                    href="/docs/MASAYON-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <Download />
+                    Download Resume
+                  </Link>
+                </Button>
+                <Button size="lg" asChild>
+                  <Link
+                    href="https://www.linkedin.com/in/christian-ace-masayon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin />
+                  </Link>
+                </Button>
+                <Button size="lg" asChild>
+                  <Link
+                    href="https://github.com/christian-ace-masayon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
+                  </Link>
+                </Button>
+                <Button size="lg" asChild>
+                  <Link href="mailto:casmasayon@gmail.com" target="_blank">
+                    <Mail />
+                  </Link>
+                </Button>
               </div>
             </div>
             <div className="flex justify-center sm:justify-center order-1 md:order-2">
@@ -101,32 +148,6 @@ export default function Home() {
                 className="rounded-4xl mx-auto md:mx-0"
               />
             </div>
-          </div>
-        </section>
-
-        <section id="about">
-          <div className="mb-2 mt-8">
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight">
-              About Me
-            </h2>
-          </div>
-          <div className="flex flex-col gap-4">
-            <p className="text-justify">
-              I am a Computer Science graduate from the University of the
-              Philippines Mindanao, specializing in full-stack development with
-              the MERN stack and user-centered UI/UX design. With hands-on
-              experience in mobile and web development, I have successfully
-              built solutions that solve real-world problems, such as developing
-              TrabaHanap, a job-matching mobile application, and contributing to
-              the PASYENTE Project for Dengue&apos;s mobile app.
-            </p>
-            <p className="text-justify">
-              My skills include frontend and backend development, creating
-              intuitive user interfaces, and ensuring seamless user experiences
-              across platforms. Adept at working in agile environments and
-              collaborating across teams. In my free time, I enjoy creating
-              music and exploring new technologies.
-            </p>
           </div>
         </section>
 
@@ -205,23 +226,23 @@ export default function Home() {
         </section>
 
         <section id="education">
-          <div className="mb-2 mt-8">
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight">
+          <div>
+            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
               Education
             </h2>
-            <div>
-              <div className="flex flex-col sm:flex-row sm:justify-between">
-                <h3 className="font-semibold text-justify text-lg sm:text-xl">
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
+                <h3 className="font-semibold text-base sm:text-lg md:text-xl">
                   University of the Philippines Mindanao
                 </h3>
-                <p className="text-sm text-muted-foreground text-justify">
-                  2020-2024
-                </p>
+                <Badge className="w-fit">
+                  <p className="text-xs sm:text-sm">2020-2024</p>
+                </Badge>
               </div>
-              <p className="text-justify">
+              <p className="text-sm sm:text-base mt-2">
                 Bachelor of Science in Computer Science
               </p>
-              <p className="text-justify">
+              <p className="text-sm sm:text-base text-muted-foreground mt-2 text-justify">
                 Thesis: Usability and User Experience Analysis on the Impact of
                 the Implementation of Local Cultural Elements on TrabaHanap: A
                 Job-Matching Mobile Application Using System Usability Scale
@@ -238,23 +259,23 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>UP Mindanao School of Management Website</CardTitle>
-                <CardDescription>
-                  A website for UP Mindanao&apos;s School of Management
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/somup.png"
                   alt="UP Mindanao School of Management Website"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  UP Mindanao School of Management Website
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A website for UP Mindanao's School of Management
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">WordPress</Badge>
                   <Badge variant="outline">Elementor</Badge>
@@ -264,7 +285,7 @@ export default function Home() {
                   <Badge variant="outline">NGINX</Badge>
                   <Badge variant="outline">Ubuntu</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/upmin-som-website">Read more</Link>
                   </Button>
@@ -278,26 +299,25 @@ export default function Home() {
                     </Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
-
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>TrabaHanap</CardTitle>
-                <CardDescription>
-                  A job-matching mobile application
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+              </div>
+            </div>
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/trabahanap.png"
                   alt="TrabaHanap"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  TrabaHanap
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A job-matching mobile application
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">MongoDB</Badge>
                   <Badge variant="outline">Express</Badge>
@@ -308,32 +328,31 @@ export default function Home() {
                   <Badge variant="outline">Tailwind CSS</Badge>
                   <Badge variant="outline">TypeScript</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/trabahanap">Read more</Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
-
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle>Physical Fitness Activity Tracker System</CardTitle>
-                <CardDescription>
-                  A physical fitness activity tracker system using the Strava
-                  API
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
+              </div>
+            </div>
+            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
+              <div className="w-full h-48 overflow-hidden rounded-t-xl">
                 <Image
                   src="/images/pfats.png"
                   alt="Physical Fitness Activity Tracker System"
                   width={400}
                   height={400}
-                  className="rounded-xl mx-auto w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </CardContent>
-              <CardFooter className="flex flex-col gap-4 items-start mt-auto">
+              </div>
+              <div className="flex flex-col gap-4 p-6 flex-1">
+                <h2 className="text-large leading-none font-semibold min-h-4">
+                  Physical Fitness Activity Tracker System
+                </h2>
+                <p className="text-muted-foreground text-justify text-sm min-h-4">
+                  A physical fitness activity tracker system using the Strava
+                  API
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">NextJS</Badge>
                   <Badge variant="outline">React</Badge>
@@ -343,7 +362,7 @@ export default function Home() {
                   <Badge variant="outline">Tailwind CSS</Badge>
                   <Badge variant="outline">Strava API</Badge>
                 </div>
-                <div className="flex gap-2 justify-start w-full">
+                <div className="flex gap-2 justify-start w-full mt-auto">
                   <Button className="flex-1" asChild>
                     <Link href="/projects/pfats">Read more</Link>
                   </Button>
@@ -366,8 +385,8 @@ export default function Home() {
                     </Link>
                   </Button>
                 </div>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           </div>
         </section>
       </div>

@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://csmasayon.com",
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
-    description: "Computer Science graduate specializing in full-stack development with MERN stack and user-centered UI/UX design.",
+    description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
     siteName: "Christian Ace Masayon Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
-    description: "Computer Science graduate specializing in full-stack development with MERN stack and user-centered UI/UX design.",
+    description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
   },
   robots: {
     index: true,
