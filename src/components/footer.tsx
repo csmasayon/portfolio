@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,15 +13,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex gap-2">
-          <a href="https://github.com/csmasayon" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/csmasayon" target="_blank" rel="noopener noreferrer">
             <Github />
-          </a>
-          <a href="https://linkedin.com/in/christian-ace-masayon" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link href="https://linkedin.com/in/christian-ace-masayon" target="_blank" rel="noopener noreferrer">
             <Linkedin />
-          </a>
-          <a href="mailto:casmasayon@gmail.com" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link href="mailto:casmasayon@gmail.com" target="_blank" rel="noopener noreferrer">
             <Mail />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
