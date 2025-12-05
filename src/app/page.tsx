@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 lg:mx-auto sm:mx-auto space-y-8 mx-4">
+      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
         <section id="home" className="py-8 sm:py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
             <div className="flex flex-col gap-1 order-2 md:order-1 items-center md:items-start">

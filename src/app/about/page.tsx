@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 export default function About() {
   return (
     <div>
-      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 lg:mx-auto sm:mx-auto space-y-8 mx-4">
+      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
         <section id="about" className="mb-2 mt-8">
           <div className="grid grid-row-1 md:grid-row-2 gap-6 md:gap-6 mb-8">
             <div className="flex flex-col gap-1 order-2 items-center">

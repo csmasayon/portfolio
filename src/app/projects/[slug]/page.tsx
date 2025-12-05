@@ -59,7 +59,7 @@ export default async function ProjectPage({
     const ProjectContent = mdxModule.default;
 
     return (
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
         <Breadcrumb>
           <BreadcrumbList className="mb-4">
             <BreadcrumbItem>
