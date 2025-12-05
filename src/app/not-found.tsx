@@ -4,20 +4,15 @@ import { Home, Mail } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-background">
-
+    <div>
       <div className="flex flex-col items-center justify-center min-h-[80vh] px-4">
         <div className="text-center space-y-6 max-w-md">
-          <div className="text-8xl font-bold text-primary/20">404</div>
+          <div className="text-8xl font-bold text-primary/40">404</div>
 
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">Page Not Found</h1>
+            <h1 className="text-3xl font-bold">This page could not be found.</h1>
             <p className="text-muted-foreground">
-              Sorry, we couldn&apos;t find the page you&apos;re looking for.
-            </p>
-
-            <p className="text-muted-foreground">
-              Contact me if you think this is an error.
+              Contact me at casmasayon@gmail.com if you think this is an error.
             </p>
           </div>
 
