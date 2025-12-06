@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { getAboutMetadata } from "@/lib/metadata";
+
+export const metadata = getAboutMetadata();
 
 export default function About() {
   return (
@@ -62,7 +65,7 @@ export default function About() {
               of a software application.
             </p>
             <p className="text-justify">
-              When I'm not coding: 🎵 producing and listening to music, 🎥
+              When I&apos;m not coding: 🎵 producing and listening to music, 🎥
               doomscrolling videos, and 🎮 playing video games
             </p>
           </div>
@@ -130,12 +133,12 @@ export default function About() {
                     </p>
                     <p className="text-sm sm:text-base mt-3 text-justify">
                       As Programmer 1, I contributed to enhancing the BS
-                      Agribusiness Economics Program at UP Mindanao's School of
+                      Agribusiness Economics Program at UP Mindanao&apos;s School of
                       Management. I created and deployed the SOM website with
                       comprehensive information on personnel, program offerings,
                       and activities to ensure accessibility and relevance. I
                       also developed dedicated pages for the SOM College
-                      Secretary's services, streamlining access to essential
+                      Secretary&apos;s services, streamlining access to essential
                       resources and improving user experience. Additionally, I
                       trained faculty and administrative staff, equipping them
                       with the skills to maintain and update the site for
@@ -172,10 +175,10 @@ export default function About() {
                     </p>
                     <p className="text-sm sm:text-base mt-3 text-justify">
                       As a Mobile Development Intern, I participated in the
-                      frontend development of the PASYENTE Project for Dengue's
+                      frontend development of the PASYENTE Project for Dengue&apos;s
                       mobile application. I designed and implemented user-friendly
                       interfaces, ensuring a seamless user experience and
-                      optimizing the app's performance.
+                      optimizing the app&apos;s performance.
                     </p>
                   </div>
                 </div>

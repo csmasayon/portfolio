@@ -5,27 +5,16 @@ import PageTransition from "@/components/page-transition";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
+import { getBaseMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = {
+  ...getBaseMetadata(),
   title: {
     default: "Christian Ace Masayon - Fullstack Web Developer | UX & UI Designer",
     template: "%s | Christian Ace Masayon"
   },
-  description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development with MERN stack and user-centered UI/UX design. Based in Tagum City, Philippines.",
-  keywords: [
-    "Christian Ace Masayon",
-    "Fullstack Developer",
-    "UX Designer",
-    "React Developer",
-    "Node.js Developer",
-    "MERN Stack",
-    "Portfolio",
-    "Philippines Developer",
-    "Web Development",
-    "Mobile Development"
-  ],
-  authors: [{ name: "Christian Ace Masayon" }],
-  creator: "Christian Ace Masayon",
+  description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development and user-centered UI/UX design. Based in Tagum City, Philippines.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -33,22 +22,20 @@ export const metadata: Metadata = {
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
     description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
     siteName: "Christian Ace Masayon Portfolio",
+    images: [
+      {
+        url: "https://csmasayon.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Christian Ace Masayon - Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
     description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    images: ["https://csmasayon.com/og-image.png"],
   },
 };
 
@@ -77,6 +64,7 @@ export default function RootLayout({
           </Suspense>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -11,6 +11,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { getProjectMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   return [
@@ -31,17 +32,23 @@ export async function generateMetadata({
     const mdxModule = await import(`@/content/projects/${slug}.mdx`);
     const mdxMetadata = mdxModule.metadata || {};
 
-    return {
-      title:
-        mdxMetadata.title ||
-        slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-      description: mdxMetadata.description || `Details about ${slug}`,
-    };
+    const title = mdxMetadata.title || 
+      slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+    const description = mdxMetadata.description || `Details about ${slug}`;
+
+    return getProjectMetadata(
+      title,
+      description,
+      mdxMetadata.image,
+      mdxMetadata.imageAlt,
+      slug
+    );
   } catch (error) {
-    return {
-      title: slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-      description: `Details about ${slug}`,
-    };
+    console.error("Error generating metadata for project:", error);
+    return getProjectMetadata(
+      "Project not found",
+      "The project you are looking for does not exist."
+    );
   }
 }
 
@@ -89,6 +96,7 @@ export default async function ProjectPage({
       </div>
     );
   } catch (error) {
+    console.error("Error rendering project page:", error);
     notFound();
   }
 }

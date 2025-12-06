@@ -1,23 +1,11 @@
 import Image from "next/image";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getProjectsMetadata } from "@/lib/metadata";
+
+export const metadata = getProjectsMetadata();
 
 export default function Projects() {
   return (
@@ -53,8 +41,8 @@ export default function Projects() {
                   UP Mindanao School of Management Website
                 </h2>
                 <p className="text-muted-foreground text-justify text-sm min-h-4">
-                  A website for UP Mindanao's School of Management
-                </p>
+                  A website for UP Mindanao&apos;s School of Management
+                </p>  
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">WordPress</Badge>
                   <Badge variant="outline">Elementor</Badge>

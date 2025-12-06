@@ -1,14 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Download, Linkedin, Github, Mail, ExternalLink } from "lucide-react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import {
@@ -32,15 +24,18 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { getHomeMetadata } from "@/lib/metadata";
+
+export const metadata = getHomeMetadata();
 
 export default function Home() {
-  const roles = ["fullstack web developer.", "UX & UI designer."];
   const [displayedText, setDisplayedText] = useState("");
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
+    const roles = ["fullstack web developer.", "UX & UI designer."];
     const currentText = roles[currentRoleIndex];
     const typingSpeed = isDeleting ? 30 : 50; // Faster when deleting
     const pauseAfterComplete = 3000; // Pause before switching
@@ -63,7 +58,7 @@ export default function Home() {
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, currentRoleIndex, roles]);
+  }, [charIndex, isDeleting, currentRoleIndex]);
 
   return (
     <div>
@@ -274,7 +269,7 @@ export default function Home() {
                   UP Mindanao School of Management Website
                 </h2>
                 <p className="text-muted-foreground text-justify text-sm min-h-4">
-                  A website for UP Mindanao's School of Management
+                  A website for UP Mindanao&apos;s School of Management
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">WordPress</Badge>
