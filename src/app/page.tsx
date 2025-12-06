@@ -24,9 +24,6 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { getHomeMetadata } from "@/lib/metadata";
-
-export const metadata = getHomeMetadata();
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState("");
