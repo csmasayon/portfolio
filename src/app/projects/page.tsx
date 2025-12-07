@@ -1,16 +1,17 @@
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { ProjectCard } from "@/components/project-card";
 import { getProjectsMetadata } from "@/lib/metadata";
+import { getAllProjects } from "@/lib/projects";
+import { Project } from "@/types/projects";
+
 
 export const metadata = getProjectsMetadata();
 
 export default function Projects() {
+  const projects = getAllProjects();
+  
   return (
     <div>
-      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
+      <div className="max-w-6xl mt-4 sm:mt-8 mb-8 mx-6 sm:mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
         <section id="projects" className="mb-[2em] mt-[2em]">
           <div className="grid grid-row-1 md:grid-row-2 gap-6 md:gap-6 mb-8">
             <div className="flex flex-col gap-1 order-2 items-center">
@@ -18,7 +19,8 @@ export default function Projects() {
                 Projects
               </h1>
               <p className="text-muted-foreground text-justify text-lg min-h-4">
-                These projects showcase my skills in various frameworks and programming languages, alongside solving real-world problems.
+                These projects showcase my skills in various frameworks and
+                programming languages, alongside solving real-world problems.
               </p>
             </div>
           </div>
@@ -26,134 +28,19 @@ export default function Projects() {
 
         <section id="projects-list" className="mb-[2em] mt-[2em]">
           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
-              <div className="w-full h-48 overflow-hidden rounded-t-xl">
-                <Image
-                  src="/images/somup.png"
-                  alt="UP Mindanao School of Management Website"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-4 p-6 flex-1">
-                <h2 className="text-large leading-none font-semibold min-h-4">
-                  UP Mindanao School of Management Website
-                </h2>
-                <p className="text-muted-foreground text-justify text-sm min-h-4">
-                  A website for UP Mindanao&apos;s School of Management
-                </p>  
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">WordPress</Badge>
-                  <Badge variant="outline">Elementor</Badge>
-                  <Badge variant="outline">PHP</Badge>
-                  <Badge variant="outline">Amazon Lightsail</Badge>
-                  <Badge variant="outline">AWS</Badge>
-                  <Badge variant="outline">NGINX</Badge>
-                  <Badge variant="outline">Ubuntu</Badge>
-                </div>
-                <div className="flex gap-2 justify-start w-full mt-auto">
-                  <Button className="flex-1" asChild>
-                    <Link href="/projects/upmin-som-website">Read more</Link>
-                  </Button>
-                  <Button size="icon" asChild>
-                    <Link
-                      href="https://som.upmin.edu.ph"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
-              <div className="w-full h-48 overflow-hidden rounded-t-xl">
-                <Image
-                  src="/images/trabahanap.png"
-                  alt="TrabaHanap"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-4 p-6 flex-1">
-                <h2 className="text-large leading-none font-semibold min-h-4">
-                  TrabaHanap
-                </h2>
-                <p className="text-muted-foreground text-justify text-sm min-h-4">
-                  A job-matching mobile application
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">MongoDB</Badge>
-                  <Badge variant="outline">Express</Badge>
-                  <Badge variant="outline">React Native</Badge>
-                  <Badge variant="outline">Node.js</Badge>
-                  <Badge variant="outline">Expo</Badge>
-                  <Badge variant="outline">Figma</Badge>
-                  <Badge variant="outline">Tailwind CSS</Badge>
-                  <Badge variant="outline">TypeScript</Badge>
-                </div>
-                <div className="flex gap-2 justify-start w-full mt-auto">
-                  <Button className="flex-1" asChild>
-                    <Link href="/projects/trabahanap">Read more</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
-              <div className="w-full h-48 overflow-hidden rounded-t-xl">
-                <Image
-                  src="/images/pfats.png"
-                  alt="Physical Fitness Activity Tracker System"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-4 p-6 flex-1">
-                <h2 className="text-large leading-none font-semibold min-h-4">
-                  Physical Fitness Activity Tracker System
-                </h2>
-                <p className="text-muted-foreground text-justify text-sm min-h-4">
-                  A physical fitness activity tracker system using the Strava
-                  API
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">NextJS</Badge>
-                  <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">Express</Badge>
-                  <Badge variant="outline">TypeScript</Badge>
-                  <Badge variant="outline">Node.js</Badge>
-                  <Badge variant="outline">Tailwind CSS</Badge>
-                  <Badge variant="outline">Strava API</Badge>
-                </div>
-                <div className="flex gap-2 justify-start w-full mt-auto">
-                  <Button className="flex-1" asChild>
-                    <Link href="/projects/pfats">Read more</Link>
-                  </Button>
-                  <Button size="icon" asChild>
-                    <Link
-                      href="https://pfats.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink />
-                    </Link>
-                  </Button>
-                  <Button size="icon" asChild>
-                    <Link
-                      href="https://github.com/csmasayon/pfats"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
+            {projects.map((project: Project, index: number) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                imageAlt={project.imageAlt}
+                technologies={project.technologies}
+                readMoreHref={project.readMoreHref}
+                externalLink={project.externalLink}
+                githubLink={project.githubLink}
+              />
+            ))}
           </div>
         </section>
       </div>

@@ -1,13 +1,18 @@
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { getAboutMetadata } from "@/lib/metadata";
+import { ExperienceCard } from "@/components/experience-card";
+import { EducationCard } from "@/components/education-card";
+import { education } from "@/data/education";
+import { Education } from "@/types/education";
+import { experience } from "@/data/experience";
+import { Experience, ExperienceItem } from "@/types/experience";
 
 export const metadata = getAboutMetadata();
 
 export default function About() {
   return (
     <div>
-      <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
+      <div className="max-w-6xl mt-4 sm:mt-8 mb-8 mx-6 sm:mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
         <section id="about" className="mb-2 mt-8">
           <div className="grid grid-row-1 md:grid-row-2 gap-6 md:gap-6 mb-8">
             <div className="flex flex-col gap-1 order-2 items-center">
@@ -69,7 +74,8 @@ export default function About() {
             </p>
             <p className="text-justify text-muted-foreground italic">
               My logo is actually a wordplay of my name&apos;s initials,
-              &quot;CAM&quot; ➡️ Camera ➡️ Shutter, together with the Ace of Spades (from my name).
+              &quot;CAM&quot; ➡️ Camera ➡️ Shutter, together with the Ace of
+              Spades (from my name).
             </p>
           </div>
         </section>
@@ -79,25 +85,17 @@ export default function About() {
             <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
               Education
             </h2>
-            <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
-              <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                <h3 className="font-semibold text-base sm:text-lg md:text-xl">
-                  University of the Philippines Mindanao
-                </h3>
-                <Badge className="w-fit">
-                  <p className="text-xs sm:text-sm">2020 - 2024</p>
-                </Badge>
-              </div>
-              <p className="text-sm sm:text-base mt-2">
-                Bachelor of Science in Computer Science
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground mt-2 text-justify">
-                Thesis: Usability and User Experience Analysis on the Impact of
-                the Implementation of Local Cultural Elements on TrabaHanap: A
-                Job-Matching Mobile Application Using System Usability Scale
-                (SUS) and User Experience Questionnaire-Short (UEQ-S)
-              </p>
-            </div>
+          </div>
+          <div className="space-y-4 sm:space-y-8">
+            {education.map((education: Education, index: number) => (
+              <EducationCard
+                key={index}
+                school={education.school}
+                year={education.year}
+                degree={education.degree}
+                description={education.description}
+              />
+            ))}
           </div>
         </section>
 
@@ -107,153 +105,32 @@ export default function About() {
               Experience
             </h2>
             <div className="space-y-4 sm:space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
-                <div className="md:col-span-2">
-                  <div className="text-left md:text-right md:sticky md:top-8">
-                    <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
-                      2025
-                    </h3>
-                  </div>
-                </div>
-                <div className="md:col-span-8">
-                  <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                      <h3 className="font-semibold text-base sm:text-lg md:text-xl">
-                        UI/UX Designer
+              {experience.map((yearGroup: Experience) => (
+                <div
+                  key={yearGroup.year}
+                  className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6"
+                >
+                  <div className="md:col-span-2">
+                    <div className="text-left md:text-right md:sticky md:top-8">
+                      <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
+                        {yearGroup.year}
                       </h3>
-                      <Badge className="w-fit">
-                        <p className="text-xs sm:text-sm">Nov 2025 - Present</p>
-                      </Badge>
                     </div>
-                    <p className="text-sm sm:text-base mt-2">
-                      BetterGov.ph · Volunteer · Remote
-                    </p>
-                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
-                      Philippines
-                    </p>
-                    <p className="text-sm sm:text-base mt-3 text-justify">
-                      Currently volunteering for BetterGov.ph and Citizens for
-                      Good Governance, in charge of user interface and user
-                      experience design.
-                    </p>
+                  </div>
+                  <div className="md:col-span-8 space-y-4">
+                    {yearGroup.items.map((experience: ExperienceItem, index: number) => (
+                      <ExperienceCard
+                        key={index}
+                        title={experience.title}
+                        year={experience.period}
+                        subheading={experience.subheading}
+                        location={experience.location}
+                        description={experience.description}
+                      />
+                    ))}
                   </div>
                 </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
-                <div className="md:col-span-2">
-                  <div className="text-left md:text-right md:sticky md:top-8">
-                    <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
-                      2024
-                    </h3>
-                  </div>
-                </div>
-                <div className="md:col-span-8">
-                  <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                      <h3 className="font-semibold text-base sm:text-lg md:text-xl">
-                        Programmer 1
-                      </h3>
-                      <Badge className="w-fit">
-                        <p className="text-xs sm:text-sm">
-                          Nov 2024 - Dec 2024
-                        </p>
-                      </Badge>
-                    </div>
-                    <p className="text-sm sm:text-base mt-2">
-                      University of the Philippines Mindanao School of
-                      Management · Contract · Onsite
-                    </p>
-                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
-                      Davao, Philippines
-                    </p>
-                    <p className="text-sm sm:text-base mt-3 text-justify">
-                      As Programmer 1, I contributed to enhancing the BS
-                      Agribusiness Economics Program at UP Mindanao&apos;s
-                      School of Management. I created and deployed the SOM
-                      website with comprehensive information on personnel,
-                      program offerings, and activities to ensure accessibility
-                      and relevance. I also developed dedicated pages for the
-                      SOM College Secretary&apos;s services, streamlining access
-                      to essential resources and improving user experience.
-                      Additionally, I trained faculty and administrative staff,
-                      equipping them with the skills to maintain and update the
-                      site for long-term sustainability.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
-                <div className="md:col-span-2">
-                  <div className="text-left md:text-right md:sticky md:top-8">
-                    <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
-                      2023
-                    </h3>
-                  </div>
-                </div>
-                <div className="md:col-span-8">
-                  <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                      <h3 className="font-semibold text-base sm:text-lg md:text-xl">
-                        Mobile Development Intern
-                      </h3>
-                      <Badge className="w-fit">
-                        <p className="text-xs sm:text-sm">
-                          Jul 2023 - Aug 2023
-                        </p>
-                      </Badge>
-                    </div>
-                    <p className="text-sm sm:text-base mt-2">
-                      PASYENTE Project for Dengue · Internship · Hybrid
-                    </p>
-                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
-                      Davao, Philippines
-                    </p>
-                    <p className="text-sm sm:text-base mt-3 text-justify">
-                      As a Mobile Development Intern, I participated in the
-                      frontend development of the PASYENTE Project for
-                      Dengue&apos;s mobile application. I designed and
-                      implemented user-friendly interfaces, ensuring a seamless
-                      user experience and optimizing the app&apos;s performance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
-                <div className="md:col-span-2">
-                  <div className="text-left md:text-right md:sticky md:top-8">
-                    <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
-                      2022
-                    </h3>
-                  </div>
-                </div>
-                <div className="md:col-span-8">
-                  <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                      <h3 className="font-semibold text-base sm:text-lg md:text-xl">
-                        Web Developent Intern
-                      </h3>
-                      <Badge className="w-fit">
-                        <p className="text-xs sm:text-sm">
-                          Feb 2022 - Jun 2022
-                        </p>
-                      </Badge>
-                    </div>
-                    <p className="text-sm sm:text-base mt-2">
-                      haws · Internship · Hybrid
-                    </p>
-                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
-                      Davao, Philippines
-                    </p>
-                    <p className="text-sm sm:text-base mt-3 text-justify">
-                      As a Web Development Intern, I contributed to the overall
-                      redesign of the company website by collaborating with the
-                      team using Figma. I focused on enhancing user experience
-                      and functionality, creating a more intuitive and visually
-                      appealing interface.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
