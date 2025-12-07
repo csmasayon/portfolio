@@ -1,7 +1,15 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-async function loadGoogleFont(font: string, text: string, weight: number = 400) {
-  const url = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(text)}`;
+async function loadGoogleFont(
+  font: string,
+  text: string,
+  weight: number = 400
+) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(
+    text
+  )}`;
   const css = await (await fetch(url)).text();
   const resource = css.match(
     /src: url\((.+)\) format\('(opentype|truetype)'\)/
@@ -19,12 +27,24 @@ async function loadGoogleFont(font: string, text: string, weight: number = 400) 
 
 export async function GET() {
   // Collect all text that will be rendered
-  const allText = "Christian Ace Masayon Fullstack Web Developer UX UI Designer csmasayon.com";
+  const allText =
+    "Christian Ace Masayon Fullstack Web Developer UX UI Designer csmasayon.com";
   const nameText = "Christian Ace Masayon";
 
   // Load Geist fonts - regular and bold
   const geistRegular = await loadGoogleFont("Geist", allText, 400);
   const geistBold = await loadGoogleFont("Geist", nameText, 700);
+
+  // Load logo
+  let logoBase64: string | null = null;
+  try {
+    const logoData = await readFile(
+      join(process.cwd(), "public/images/logo-w.png")
+    );
+    logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+  } catch (error) {
+    console.warn("Failed to load logo:", error);
+  }
 
   return new ImageResponse(
     (
@@ -43,6 +63,9 @@ export async function GET() {
         }}
       >
         <div tw="flex flex-col items-center justify-center gap-6">
+          {logoBase64 && (
+            <img src={logoBase64} alt="Logo" width={100} height={100} />
+          )}
           <h1
             tw="text-6xl text-white leading-tight text-center"
             style={{
