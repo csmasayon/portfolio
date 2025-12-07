@@ -5,7 +5,7 @@ export const siteConfig = {
     title: "Christian Ace Masayon - Fullstack Web Developer | UX & UI Designer",
     description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
     url: "https://csmasayon.com",
-    ogImage: "/og-image.png",
+    ogImage: "/api/og",
     keywords: [
         "Christian Ace Masayon",
         "Fullstack Developer",
