@@ -38,25 +38,41 @@ portfolio/
 │ │ │ └── route.tsx # Dynamic OG image generation
 │ │ ├── about/ # About page
 │ │ ├── projects/ # Projects listing & detail pages
-│ │ │ └── [slug]/ # Dynamic project pages (MDX)
+│ │ │ ├── [slug]/ # Dynamic project pages (MDX)
+│ │ │ └── page.tsx # Projects listing page
 │ │ ├── globals.css # Global styles & theme
 │ │ ├── layout.tsx # Root layout with metadata
-│ │ └── page.tsx # Home page
+│ │ ├── page.tsx # Home page
+│ │ ├── robots.ts # Robots.txt generation
+│ │ └── sitemap.ts # Sitemap generation
 │ ├── components/ # React components
 │ │ ├── svg/ # SVG icon components
-│ │ ├── ui/ # Reusable UI components
-│ │ ├── header.tsx # Navigation header
+│ │ ├── ui/ # Reusable UI components (shadcn/ui)
+│ │ ├── education-card.tsx # Education card component
+│ │ ├── experience-card.tsx # Experience card component
+│ │ ├── project-card.tsx # Project card component
 │ │ ├── footer.tsx # Site footer
+│ │ ├── header.tsx # Navigation header
 │ │ ├── mobile-menu.tsx # Mobile navigation
+│ │ ├── page-transition.tsx # Page transition animations
 │ │ ├── theme-toggle.tsx # Theme switcher
 │ │ └── theme-provider.tsx # Theme context provider
 │ ├── content/ # MDX content files
 │ │ └── projects/ # Project markdown files
+│ ├── data/ # TypeScript data files
+│ │ ├── projects.ts # Projects data
+│ │ ├── experience.ts # Work experience data
+│ │ └── education.ts # Education data
+│ ├── types/ # TypeScript type definitions
+│ │ ├── projects.ts # Project types
+│ │ ├── experience.ts # Experience types
+│ │ └── education.ts # Education types
 │ └── lib/ # Utilities
 │ ├── metadata.ts # SEO metadata helpers
+│ ├── projects.ts # Project data helpers
 │ └── utils.ts # General utilities
 ├── public/
-│ ├── images/ # Static images (logo, projects, etc.)
+│ ├── images/ # Static images (logo, projects, portrait)
 │ └── docs/ # Documents (resume PDF)
 ├── .github/
 │ └── dependabot.yml # Dependabot configuration
