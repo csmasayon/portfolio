@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
 export const alt = 'Christian Ace Masayon - Portfolio';
 export const size = {
@@ -8,6 +10,12 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image() {
+  // Load your portrait image
+  const portraitData = await readFile(
+    join(process.cwd(), 'public/images/portrait.PNG')
+  );
+  const portraitBase64 = `data:image/png;base64,${portraitData.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
@@ -15,64 +23,107 @@ export default async function Image() {
           height: '100%',
           width: '100%',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#0a0a0a',
-          backgroundImage: 'linear-gradient(to bottom, #1a1a1a, #0a0a0a)',
+          flexDirection: 'row',
+          backgroundColor: '#252525',
+          backgroundImage: `
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)
+          `,
+          backgroundSize: '24px 24px',
           padding: '80px',
+          position: 'relative',
         }}
       >
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             width: '100%',
-            maxWidth: '900px',
+            height: '100%',
+            gap: '60px',
           }}
         >
-          <h1
-            style={{
-              fontSize: 64,
-              fontWeight: 'bold',
-              color: '#ffffff',
-              marginBottom: 16,
-              textAlign: 'center',
-              lineHeight: 1.2,
-            }}
-          >
-            Christian Ace Masayon
-          </h1>
+          {/* Left - Text */}
           <div
             style={{
-              width: '100px',
-              height: '2px',
-              backgroundColor: '#3b82f6',
-              marginBottom: 24,
-            }}
-          />
-          <p
-            style={{
-              fontSize: 28,
-              color: '#a1a1aa',
-              textAlign: 'center',
-              lineHeight: 1.5,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+              flex: 1,
+              gap: '12px',
             }}
           >
-            Fullstack Developer & UX Designer
-          </p>
-          <p
+            <h1
+              style={{
+                fontSize: 56,
+                fontWeight: 'bold',
+                color: '#fafafa',
+                lineHeight: 1.2,
+                marginBottom: 8,
+              }}
+            >
+              Hi, I&apos;m Christian Ace Masayon.
+            </h1>
+            <h2
+              style={{
+                fontSize: 32,
+                fontWeight: 600,
+                color: '#fafafa',
+                lineHeight: 1.3,
+                marginBottom: 4,
+              }}
+            >
+              I&apos;m a fullstack web developer.
+            </h2>
+            <p
+              style={{
+                fontSize: 20,
+                color: '#b5b5b5',
+                lineHeight: 1.5,
+                marginTop: 8,
+              }}
+            >
+              Based in Tagum City, Davao del Norte, Philippines
+            </p>
+          </div>
+
+          {/* Right - Portrait */}
+          <div
             style={{
-              fontSize: 20,
-              color: '#71717a',
-              textAlign: 'center',
-              marginTop: 32,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '300px',
+              height: '300px',
+              borderRadius: '16px',
+              overflow: 'hidden',
             }}
           >
-            csmasayon.com
-          </p>
+            <img
+              src={portraitBase64}
+              alt="Christian Ace Masayon"
+              width={300}
+              height={300}
+              style={{
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        </div>
+
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '40px',
+            left: '80px',
+            fontSize: 18,
+            color: '#808080',
+          }}
+        >
+          csmasayon.com
         </div>
       </div>
     ),
