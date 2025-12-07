@@ -22,20 +22,11 @@ export const metadata: Metadata = {
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
     description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
     siteName: "Christian Ace Masayon Portfolio",
-    images: [
-      {
-        url: "https://csmasayon.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Christian Ace Masayon - Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Christian Ace Masayon - Fullstack Developer & UX Designer",
     description: "Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
-    images: ["https://csmasayon.com/og-image.png"],
   },
 };
 
