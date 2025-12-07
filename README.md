@@ -89,18 +89,23 @@ portfolio/
 ### Installation
 
 1. **Clone the repository**
+```
    git clone <repository-url>
    cd portfolio
-   2. **Install dependencies**sh
+```
+2. **Install dependencies**
+```
    pnpm install
    # or
    npm install
-   3. **Run the development server**ash
+```
+3. **Run the development server**
+```
    pnpm dev
    # or
    npm run dev
-   4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+```
+4. **Access the application at [http://localhost:3000](http://localhost:3000)**
 
 ## 📝 Available Scripts
 
