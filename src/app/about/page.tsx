@@ -12,10 +12,10 @@ export default function About() {
           <div className="grid grid-row-1 md:grid-row-2 gap-6 md:gap-6 mb-8">
             <div className="flex flex-col gap-1 order-2 items-center">
               <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance">
-                Hi, I&apos;m Christian Ace!
+                Hi, I&apos;m Christian Ace! 👋
               </h1>
               <h3 className="scroll-m-20 text-muted-foreground text-base sm:text-xl text-center sm:text-left font-normal tracking-tight text-balance">
-                Based in Tagum City, Davao del Norte, Philippines
+                Based in the Philippines
               </h3>
             </div>
             <div className="flex justify-center sm:justify-center order-1">
@@ -30,21 +30,21 @@ export default function About() {
           </div>
         </section>
 
-        <section id="about-me">
+        <section id="about-me" className="mb-[2em] mt-[2em]">
           <div className="flex flex-col gap-4 text-base sm:text-lg text-justify">
             <p>
               I started my journey in coding way back in junior high school. I
-              knew then I had an interest in developing websites, especially on
-              how these websites work. I remember that I built a website for my
-              favorite artist, Daft Punk, during that time and also built a blog
-              which revolved in news about gaming. However, my first exposure to
-              web development was during my elementary years, where I was taught
-              how to develop a simple website using HTML and CSS and deployed it
-              using a free hosting service.
+              knew then that I had an interest in coding, especially on how
+              these websites and programs work. I remember that I remember that
+              I built a website for my favorite artist, Daft Punk, during that
+              time, and also built a blog that revolved around gaming. However,
+              my first exposure to web development was during my elementary
+              years, where I was taught how to build a simple website using HTML
+              and CSS and deploy it using a free hosting service.
             </p>
             <p>
               During my college years, I delved deeper into computer science
-              during my time in the University of the Philippines Mindanao. I
+              while studying at the University of the Philippines Mindanao. I
               learned about <b>data structures</b>, <b>algorithms</b>,{" "}
               <b>neural networks</b>, <b>machine learning</b>,{" "}
               <b>cybersecurity</b>, and <b>software engineering </b>
@@ -55,23 +55,26 @@ export default function About() {
             <p>
               My thesis paper focused on the{" "}
               <b>usability and user experience </b>
-              analysis of the TrabaHanap mobile application. The methodology I
-              used was the System Usability Scale (SUS) and User Experience
-              Questionnaire-Short (UEQ-S) to evaluate the usability and user
-              experience of the app and the impact of the implementation of
-              local cultural elements on the app. While conducting my thesis, I
-              developed my skills in mobile development, and also learned about
-              the importance of user experience and usability in the development
-              of a software application.
+              analysis of the TrabaHanap mobile application. My study focused on
+              whether the implementation of local cultural elements on the app
+              affected the usability and user experience of the app. While
+              conducting my thesis, I developed my skills in mobile development,
+              and also learned about the importance of user experience and
+              usability in a software application.
             </p>
             <p className="text-justify">
               When I&apos;m not coding: 🎵 producing and listening to music, 🎥
-              doomscrolling videos, and 🎮 playing video games
+              watching documentaries and video essays, and 🎮 playing video
+              games
+            </p>
+            <p className="text-justify text-muted-foreground italic">
+              My logo is actually a wordplay of my name&apos;s initials,
+              &quot;CAM&quot; ➡️ Camera ➡️ Shutter, together with the Ace of Spades (from my name).
             </p>
           </div>
         </section>
 
-        <section id="education">
+        <section id="education" className="mb-[2em] mt-[2em]">
           <div>
             <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
               Education
@@ -82,7 +85,7 @@ export default function About() {
                   University of the Philippines Mindanao
                 </h3>
                 <Badge className="w-fit">
-                  <p className="text-xs sm:text-sm">2020-2024</p>
+                  <p className="text-xs sm:text-sm">2020 - 2024</p>
                 </Badge>
               </div>
               <p className="text-sm sm:text-base mt-2">
@@ -98,12 +101,44 @@ export default function About() {
           </div>
         </section>
 
-        <section id="experience">
+        <section id="experience" className="mb-[2em] mt-[2em]">
           <div>
             <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
-              Job Experience
+              Experience
             </h2>
             <div className="space-y-4 sm:space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
+                <div className="md:col-span-2">
+                  <div className="text-left md:text-right md:sticky md:top-8">
+                    <h3 className="font-semibold text-base sm:text-lg md:text-xl text-muted-foreground mb-2 md:mb-0">
+                      2025
+                    </h3>
+                  </div>
+                </div>
+                <div className="md:col-span-8">
+                  <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
+                      <h3 className="font-semibold text-base sm:text-lg md:text-xl">
+                        UI/UX Designer
+                      </h3>
+                      <Badge className="w-fit">
+                        <p className="text-xs sm:text-sm">Nov 2025 - Present</p>
+                      </Badge>
+                    </div>
+                    <p className="text-sm sm:text-base mt-2">
+                      BetterGov.ph · Volunteer · Remote
+                    </p>
+                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
+                      Philippines
+                    </p>
+                    <p className="text-sm sm:text-base mt-3 text-justify">
+                      Currently volunteering for BetterGov.ph and Citizens for
+                      Good Governance, in charge of user interface and user
+                      experience design.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6">
                 <div className="md:col-span-2">
                   <div className="text-left md:text-right md:sticky md:top-8">
@@ -133,16 +168,16 @@ export default function About() {
                     </p>
                     <p className="text-sm sm:text-base mt-3 text-justify">
                       As Programmer 1, I contributed to enhancing the BS
-                      Agribusiness Economics Program at UP Mindanao&apos;s School of
-                      Management. I created and deployed the SOM website with
-                      comprehensive information on personnel, program offerings,
-                      and activities to ensure accessibility and relevance. I
-                      also developed dedicated pages for the SOM College
-                      Secretary&apos;s services, streamlining access to essential
-                      resources and improving user experience. Additionally, I
-                      trained faculty and administrative staff, equipping them
-                      with the skills to maintain and update the site for
-                      long-term sustainability.
+                      Agribusiness Economics Program at UP Mindanao&apos;s
+                      School of Management. I created and deployed the SOM
+                      website with comprehensive information on personnel,
+                      program offerings, and activities to ensure accessibility
+                      and relevance. I also developed dedicated pages for the
+                      SOM College Secretary&apos;s services, streamlining access
+                      to essential resources and improving user experience.
+                      Additionally, I trained faculty and administrative staff,
+                      equipping them with the skills to maintain and update the
+                      site for long-term sustainability.
                     </p>
                   </div>
                 </div>
@@ -175,10 +210,10 @@ export default function About() {
                     </p>
                     <p className="text-sm sm:text-base mt-3 text-justify">
                       As a Mobile Development Intern, I participated in the
-                      frontend development of the PASYENTE Project for Dengue&apos;s
-                      mobile application. I designed and implemented user-friendly
-                      interfaces, ensuring a seamless user experience and
-                      optimizing the app&apos;s performance.
+                      frontend development of the PASYENTE Project for
+                      Dengue&apos;s mobile application. I designed and
+                      implemented user-friendly interfaces, ensuring a seamless
+                      user experience and optimizing the app&apos;s performance.
                     </p>
                   </div>
                 </div>
@@ -203,16 +238,18 @@ export default function About() {
                         </p>
                       </Badge>
                     </div>
-                    <p className="text-sm sm:text-base mt-2">haws · Internship · Hybrid</p>
+                    <p className="text-sm sm:text-base mt-2">
+                      haws · Internship · Hybrid
+                    </p>
                     <p className="text-sm sm:text-base text-muted-foreground mt-1">
                       Davao, Philippines
                     </p>
                     <p className="text-sm sm:text-base mt-3 text-justify">
-                      As a Web Development Intern, I contributed to the
-                      overall redesign of the company website by collaborating
-                      with the team using Figma. I focused on enhancing user
-                      experience and functionality, creating a more intuitive
-                      and visually appealing interface.
+                      As a Web Development Intern, I contributed to the overall
+                      redesign of the company website by collaborating with the
+                      team using Figma. I focused on enhancing user experience
+                      and functionality, creating a more intuitive and visually
+                      appealing interface.
                     </p>
                   </div>
                 </div>

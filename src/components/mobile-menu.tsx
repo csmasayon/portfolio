@@ -48,10 +48,31 @@ export function MobileMenu() {
               <nav>
                 <ul className="space-y-6">
                   <li>
-                    <Link href="/about" onClick={toggleMenu} className="font-semibold hover:text-primary transition-colors">About</Link>
+                    <Link
+                      href="/"
+                      onClick={toggleMenu}
+                      className="font-semibold hover:text-primary transition-colors"
+                    >
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/projects" onClick={toggleMenu} className="font-semibold hover:text-primary transition-colors">Projects</Link>
+                    <Link
+                      href="/about"
+                      onClick={toggleMenu}
+                      className="font-semibold hover:text-primary transition-colors"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/projects"
+                      onClick={toggleMenu}
+                      className="font-semibold hover:text-primary transition-colors"
+                    >
+                      Projects
+                    </Link>
                   </li>
                 </ul>
               </nav>

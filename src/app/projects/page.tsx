@@ -11,10 +11,10 @@ export default function Projects() {
   return (
     <div>
       <div className="max-w-6xl mt-4 sm:mt-8 sm:mb-8 mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
-        <section id="projects" className="mb-2 mt-8">
+        <section id="projects" className="mb-[2em] mt-[2em]">
           <div className="grid grid-row-1 md:grid-row-2 gap-6 md:gap-6 mb-8">
             <div className="flex flex-col gap-1 order-2 items-center">
-              <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance">
+              <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance mb-4">
                 Projects
               </h1>
               <p className="text-muted-foreground text-justify text-lg min-h-4">
@@ -24,7 +24,7 @@ export default function Projects() {
           </div>
         </section>
 
-        <section id="projects-list">
+        <section id="projects-list" className="mb-[2em] mt-[2em]">
           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
               <div className="w-full h-48 overflow-hidden rounded-t-xl">

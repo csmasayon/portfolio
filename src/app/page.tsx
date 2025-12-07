@@ -20,10 +20,21 @@ import {
   HtmlIcon,
   CssIcon,
   AWSIcon,
+  ExpressIcon,
+  PostmanIcon,
+  ShadcnIcon,
+  ExpoIcon,
+  VercelIcon,
+  RenderIcon,
+  SQLIcon,
+  PHPIcon,
+  VSCIcon,
+  CanvaIcon,
 } from "@/components/svg/icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState("");
@@ -63,10 +74,10 @@ export default function Home() {
         <section id="home" className="py-8 sm:py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
             <div className="flex flex-col gap-1 order-2 md:order-1 items-center md:items-start">
-              <h1 className="scroll-m-20 text-3xl sm:text-4xl text-center sm:text-left font-bold tracking-tight text-balance">
-                Hi, I&apos;m Christian Ace Masayon.
+              <h1 className="scroll-m-20 text-3xl sm:text-5xl text-center sm:text-center md:text-left font-bold tracking-tight text-balance">
+                Hi, I&apos;m Christian Ace Masayon. 👋
               </h1>
-              <h2 className="scroll-m-20 text-lg sm:text-xl text-center sm:text-left  font-semibold tracking-tight text-balance">
+              <h2 className="scroll-m-20 text-lg sm:text-2xl text-center sm:text-center font-semibold tracking-tight text-balance">
                 I&apos;m a{" "}
                 <motion.span
                   key={currentRoleIndex}
@@ -85,10 +96,10 @@ export default function Home() {
                   {"|"}
                 </motion.span>
               </h2>
-              <h3 className="scroll-m-20 text-base sm:text-large text-justify font-normal tracking-tight text-balance text-muted-foreground">
-                Based in Tagum City, Davao del Norte, Philippines
+              <h3 className="scroll-m-20 text-base sm:text-lg text-justify font-normal tracking-tight text-balance text-muted-foreground">
+                Based in the Philippines
               </h3>
-              <h3 className="scroll-m-20 text-base sm:text-large text-justify font-normal tracking-tight text-balance">
+              <h3 className="scroll-m-20 text-base sm:text-lg text-justify font-normal tracking-tight text-balance">
                 I create intuitive user interfaces, and ensure seamless user
                 experiences across platforms. I&apos;m also adept at working in
                 agile environments and collaborating across teams. In my free
@@ -131,95 +142,154 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="flex justify-center sm:justify-center order-1 md:order-2">
+            <div className="flex justify-center sm:justify-center order-1 md:order-2 ">
               <Image
                 src="/images/portrait.PNG"
                 alt="Christian Ace Masayon"
                 width={250}
                 height={250}
-                className="rounded-4xl mx-auto md:mx-0"
+                className="w-40 sm:w-[250px] h-auto rounded-xl m-auto"
               />
             </div>
           </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" className="mb-[2em] mt-[2em]">
           <div>
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight">
+            <h2 className="scroll-m-20 pb-2 text-3xl sm:text-4xl font-bold tracking-tight my-4">
               Skills
             </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-2">
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <NextjsIcon className="w-6 h-6" />
-              <h2>Next.js</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <ReactIcon className="w-6 h-6" />
-              <h2>React</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <NodeIcon className="w-6 h-6" />
-              <h2>Node.js</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <TailwindIcon className="w-6 h-6" />
-              <h2>Tailwind CSS</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <MongodbIcon className="w-6 h-6" />
-              <h2>MongoDB</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <MysqlIcon className="w-6 h-6" />
-              <h2>MySQL</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <FirebaseIcon className="w-6 h-6" />
-              <h2>Firebase</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <AWSIcon className="w-6 h-6" />
-              <h2>AWS</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <PythonIcon className="w-6 h-6" />
-              <h2>Python</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <TypeScriptIcon className="w-6 h-6" />
-              <h2>TypeScript</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <JavaScriptIcon className="w-6 h-6" />
-              <h2>JavaScript</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <HtmlIcon className="w-6 h-6" />
-              <h2>HTML</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <CssIcon className="w-6 h-6" />
-              <h2>CSS</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <FigmaIcon className="w-6 h-6" />
-              <h2>Figma</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <GitIcon className="w-6 h-6" />
-              <h2>Git</h2>
-            </div>
-            <div className="text-lg sm:text-lg items-center font-bold tracking-tight bg-card text-card-foreground flex flex-row gap-2 rounded-xl border p-4 shadow-sm">
-              <GitHubIcon className="w-6 h-6" />
-              <h2>GitHub</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Frontend Development
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center items-center">
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <NextjsIcon className="w-6 h-6" /> Next.js
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <ReactIcon className="w-6 h-6" /> React
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <TailwindIcon className="w-6 h-6" /> Tailwind CSS
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <ShadcnIcon className="w-6 h-6" /> shadcn/ui
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Backend Development
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center items-center">
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <MongodbIcon className="w-6 h-6" /> MongoDB
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <MysqlIcon className="w-6 h-6" /> MySQL
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <ExpressIcon className="w-6 h-6" /> Express
+                    </div>
+
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <FirebaseIcon className="w-6 h-6" /> Firebase
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <NodeIcon className="w-6 h-6" /> Node.js
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Tools & Technologies
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center items-center">
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <FigmaIcon className="w-6 h-6" /> Figma
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <GitIcon className="w-6 h-6" /> Git
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <GitHubIcon className="w-6 h-6" /> GitHub
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <PostmanIcon className="w-6 h-6" /> Postman
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <VercelIcon className="w-6 h-6" /> Vercel
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <AWSIcon className="w-6 h-6" /> AWS
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <ExpoIcon className="w-6 h-6" /> Expo
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <RenderIcon className="w-6 h-6" /> Render
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <VSCIcon className="w-6 h-6" /> Visual Studio Code
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <CanvaIcon className="w-6 h-6" /> Canva
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Programming Languages
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center items-center">
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <TypeScriptIcon className="w-6 h-6" /> TypeScript
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <JavaScriptIcon className="w-6 h-6" /> JavaScript
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <HtmlIcon className="w-6 h-6" /> HTML
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <CssIcon className="w-6 h-6" /> CSS
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <SQLIcon className="w-6 h-6" /> SQL
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <PythonIcon className="w-6 h-6" /> Python
+                    </div>
+                    <div className="border shadow-sm rounded-md p-2 flex flex-wrap gap-2 justify-center items-center bg-card">
+                      <PHPIcon className="w-6 h-6" /> PHP
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
-        <section id="education">
+        <section id="education" className="mb-[2em] mt-[2em]">
           <div>
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
+            <h2 className="scroll-m-20 pb-2 text-3xl sm:text-4xl font-bold tracking-tight my-4">
               Education
             </h2>
             <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm p-4 sm:p-6">
@@ -228,7 +298,7 @@ export default function Home() {
                   University of the Philippines Mindanao
                 </h3>
                 <Badge className="w-fit">
-                  <p className="text-xs sm:text-sm">2020-2024</p>
+                  <p className="text-xs sm:text-sm">2020 - 2024</p>
                 </Badge>
               </div>
               <p className="text-sm sm:text-base mt-2">
@@ -244,9 +314,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" className="mb-[2em] mt-[2em]">
           <div>
-            <h2 className="scroll-m-20 pb-2 text-2xl sm:text-3xl font-bold tracking-tight my-4">
+            <h2 className="scroll-m-20 pb-2 text-3xl sm:text-4xl font-bold tracking-tight my-4">
               Highlighted Projects
             </h2>
           </div>
