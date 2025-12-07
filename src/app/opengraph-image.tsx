@@ -10,7 +10,12 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image() {
-  // Load your portrait image
+  const interResponse = await fetch(
+    'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2'
+  );
+  const interFont = await interResponse.arrayBuffer();
+
+  // Load portrait
   const portraitData = await readFile(
     join(process.cwd(), 'public/images/portrait.PNG')
   );
@@ -32,6 +37,7 @@ export default async function Image() {
           backgroundSize: '24px 24px',
           padding: '80px',
           position: 'relative',
+          fontFamily: 'Inter',
         }}
       >
         <div
@@ -45,7 +51,6 @@ export default async function Image() {
             gap: '60px',
           }}
         >
-          {/* Left - Text */}
           <div
             style={{
               display: 'flex',
@@ -59,10 +64,11 @@ export default async function Image() {
             <h1
               style={{
                 fontSize: 56,
-                fontWeight: 'bold',
+                fontWeight: 700, // Bold
                 color: '#fafafa',
                 lineHeight: 1.2,
                 marginBottom: 8,
+                fontFamily: 'Inter',
               }}
             >
               Hi, I&apos;m Christian Ace Masayon.
@@ -70,10 +76,11 @@ export default async function Image() {
             <h2
               style={{
                 fontSize: 32,
-                fontWeight: 600,
+                fontWeight: 600, // Semi-bold
                 color: '#fafafa',
                 lineHeight: 1.3,
                 marginBottom: 4,
+                fontFamily: 'Inter',
               }}
             >
               I&apos;m a fullstack web developer.
@@ -81,16 +88,17 @@ export default async function Image() {
             <p
               style={{
                 fontSize: 20,
+                fontWeight: 400,
                 color: '#b5b5b5',
                 lineHeight: 1.5,
                 marginTop: 8,
+                fontFamily: 'Inter',
               }}
             >
               Based in Tagum City, Davao del Norte, Philippines
             </p>
           </div>
 
-          {/* Right - Portrait */}
           <div
             style={{
               display: 'flex',
@@ -100,6 +108,7 @@ export default async function Image() {
               height: '300px',
               borderRadius: '16px',
               overflow: 'hidden',
+              backgroundColor: '#2a2a2a',
             }}
           >
             <img
@@ -108,7 +117,9 @@ export default async function Image() {
               width={300}
               height={300}
               style={{
-                objectFit: 'cover',
+                objectFit: 'contain',
+                width: '100%',
+                height: '100%',
               }}
             />
           </div>
@@ -121,6 +132,7 @@ export default async function Image() {
             left: '80px',
             fontSize: 18,
             color: '#808080',
+            fontFamily: 'Inter',
           }}
         >
           csmasayon.com
@@ -129,6 +141,14 @@ export default async function Image() {
     ),
     {
       ...size,
+      fonts: [
+        {
+          name: 'Inter',
+          data: interFont,
+          style: 'normal',
+          weight: 400,
+        },
+      ],
     }
   );
 }
