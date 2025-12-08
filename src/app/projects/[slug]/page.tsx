@@ -32,7 +32,8 @@ export async function generateMetadata({
     const mdxModule = await import(`@/content/projects/${slug}.mdx`);
     const mdxMetadata = mdxModule.metadata || {};
 
-    const title = mdxMetadata.title || 
+    const title =
+      mdxMetadata.title ||
       slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
     const description = mdxMetadata.description || `Details about ${slug}`;
 
@@ -82,16 +83,16 @@ export default async function ProjectPage({
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none">
+        <article className="prose prose-lg dark:prose-invert max-w-none">
           <ProjectContent />
         </article>
         <div className="flex justify-center">
-        <Button className="mt-4 align-center" asChild>
-          <Link href="/projects">
-            <ArrowLeft />
-            Back to Projects
-          </Link>
-        </Button>
+          <Button className="mt-4 align-center" asChild>
+            <Link href="/projects">
+              <ArrowLeft />
+              Back to Projects
+            </Link>
+          </Button>
         </div>
       </div>
     );
