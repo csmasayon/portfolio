@@ -14,7 +14,7 @@ export function MobileMenu() {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="sm:hidden">
       <Button
         variant="outline"
         size="icon"

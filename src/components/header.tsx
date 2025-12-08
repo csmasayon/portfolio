@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
       </div>
       <div className="flex items-center gap-[1.75em]">
-        <nav className="hidden lg:flex items-center">
+        <nav className="hidden sm:flex items-center">
           <ul className="flex items-center gap-6">
             <li className="flex items-center">
               <Link
@@ -49,7 +49,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <div className="hidden lg:flex items-center">
+        <div className="hidden sm:flex items-center">
           <ThemeToggle />
         </div>
         <MobileMenu />
