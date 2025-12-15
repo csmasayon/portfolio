@@ -5,17 +5,15 @@ A modern, responsive portfolio website built with Next.js
 ## 🛠️ Tech Stack
 
 ### Core
-- **Next.js 16.0.7** - React framework with App Router
-- **React 19.2.1** - UI library
-- **TypeScript 5.9.3** - Type safety
-- **Tailwind CSS 4.1.17** - Utility-first CSS framework
+- **Next.js** - React framework with App Router
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS framework
 
 ### UI & Styling
 - **Radix UI** - Accessible component primitives
-- **Framer Motion 12.23.25** - Animation library
-- **Lucide React 0.555.0** - Icon library
-- **next-themes 0.4.6** - Theme management
-- **Class Variance Authority** - Component variants
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
 
 ### Content & SEO
 - **MDX** - Markdown with JSX support
