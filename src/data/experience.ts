@@ -10,7 +10,7 @@ export const experience: Experience[] = [
           subheading: "BetterGov.ph · Volunteer · Remote",
           location: "Philippines",
           description:
-            "Currently volunteering for BetterGov.ph and Citizens for Good Governance, in charge of user interface and user experience design.",
+            "Currently volunteering for BetterGov.ph.",
         },
       ],
     },
