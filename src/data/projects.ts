@@ -52,7 +52,7 @@ export const projects: Project[] = [
         "Strava API"
       ],
       "readMoreHref": "/projects/pfats",
-      "externalLink": "https://pfats.vercel.app",
+      "externalLink": "https://pfats-v1.vercel.app",
       "githubLink": "https://github.com/csmasayon/pfats",
       "featured": true,
     }
