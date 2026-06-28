@@ -8,4 +8,5 @@ export interface Project {
     externalLink?: string;
     githubLink?: string;
     featured?: boolean;
+    awards?: string[];
   }

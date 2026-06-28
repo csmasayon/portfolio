@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 export const siteConfig = {
     name: "Christian Ace Masayon",
     title: "Christian Ace Masayon - Fullstack Web Developer | UX & UI Designer",
-    description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development and user-centered UI/UX design.",
+    description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development and user-centered UI/UX design. Based in Davao, Philippines.",
+    location: "Davao, Philippines",
     url: "https://csmasayon.com",
     ogImage: "/api/og",
     keywords: [

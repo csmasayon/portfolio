@@ -51,6 +51,10 @@ export default tseslint.config(
       "react/react-in-jsx-scope": "off", // Not needed with React 17+ JSX transform
       "react/prop-types": "off", // Using TypeScript for prop validation
       "react/no-unescaped-entities": "warn",
+      "react/no-unknown-property": [
+        "error",
+        { ignore: ["tw"] },
+      ],
       
       // React Hooks rules
       "react-hooks/rules-of-hooks": "error",

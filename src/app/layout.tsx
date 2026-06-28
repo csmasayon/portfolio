@@ -6,7 +6,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/next";
-import { getBaseMetadata } from "@/lib/metadata";
+import { getBaseMetadata, siteConfig } from "@/lib/metadata";
+import { PersonJsonLd } from "@/components/person-json-ld";
 
 export const metadata: Metadata = {
   ...getBaseMetadata(),
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     default: "Christian Ace Masayon - Fullstack Web Developer | UX & UI Designer",
     template: "%s | Christian Ace Masayon"
   },
-  description: "Christian Ace Masayon is a Computer Science graduate specializing in full-stack development and user-centered UI/UX design. Based in Tagum City, Philippines.",
+  description: siteConfig.description,
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
+        <PersonJsonLd />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

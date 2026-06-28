@@ -1,12 +1,17 @@
-export interface Experience {
-    year: number;
-    items: ExperienceItem[];
+export interface ExperienceLink {
+  href: string;
+  label: string;
 }
 
 export interface ExperienceItem {
-    title: string;
-    period: string;
-    subheading: string;
-    location: string;
-    description: string;
+  title: string;
+  period: string;
+  startYear: number;
+  company: string;
+  employmentType: string;
+  workMode: string;
+  location?: string;
+  highlights: string[];
+  link?: ExperienceLink;
+  tags?: string[];
 }

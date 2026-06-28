@@ -13,6 +13,7 @@ interface ProjectCardProps {
   readMoreHref: string;
   externalLink?: string;
   githubLink?: string;
+  awards?: string[];
 }
 
 export function ProjectCard({
@@ -24,26 +25,34 @@ export function ProjectCard({
   readMoreHref,
   externalLink,
   githubLink,
+  awards,
 }: ProjectCardProps) {
   return (
-    <div className="text-card-foreground flex flex-col h-full rounded-xl bg-card border shadow-sm">
-      <div className="w-full h-48 overflow-hidden rounded-t-xl">
+    <div className="text-card-foreground flex h-full flex-col rounded-xl border bg-card shadow-sm">
+      <div className="h-48 w-full overflow-hidden rounded-t-xl">
         <Image
           src={image}
           alt={imageAlt}
           width={400}
           height={400}
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex flex-col gap-4 p-6 flex-1">
+      <div className="flex flex-1 flex-col gap-4 p-6">
         <div>
-          <h2 className="text-large text-lg sm:text-xl font-semibold min-h-4">
-            {title}
-          </h2>
-          <p className="text-muted-foreground text-justify text-md sm:text-base min-h-4 mt-2">
+          <h2 className="text-lg font-semibold sm:text-xl">{title}</h2>
+          <p className="mt-2 text-justify text-base text-muted-foreground">
             {description}
           </p>
+          {awards && awards.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {awards.map((award) => (
+                <Badge key={award} variant="secondary" className="text-xs">
+                  {award}
+                </Badge>
+              ))}
+            </div>
+          )}
         </div>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
@@ -52,7 +61,7 @@ export function ProjectCard({
             </Badge>
           ))}
         </div>
-        <div className="flex gap-2 justify-start w-full mt-auto">
+        <div className="mt-auto flex w-full justify-start gap-2">
           <Button className="flex-1" asChild>
             <Link href={readMoreHref}>Read more</Link>
           </Button>
@@ -62,6 +71,7 @@ export function ProjectCard({
                 href={externalLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Visit ${title} live site`}
               >
                 <ExternalLink />
               </Link>
@@ -73,6 +83,7 @@ export function ProjectCard({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View ${title} on GitHub`}
               >
                 <Github />
               </Link>

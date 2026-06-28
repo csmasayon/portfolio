@@ -1,6 +1,18 @@
 import * as React from "react";
 
-export const AWSIcon = (props) => (
+type IconProps = React.SVGProps<SVGSVGElement>;
+
+export const ViteIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="m8.525 4.63l-5.132-.915a1.17 1.17 0 0 0-1.164.468a1.16 1.16 0 0 0-.07 1.28l8.901 15.58a1.182 1.182 0 0 0 2.057-.008l8.729-15.578c.49-.875-.262-1.917-1.242-1.739l-4.574.813l-.206.754l4.906-.871a.474.474 0 0 1 .498.697L12.5 20.689a.47.47 0 0 1-.5.234a.47.47 0 0 1-.326-.231L2.772 5.112a.474.474 0 0 1 .496-.7l5.133.916l.074.013z" /><path fill="currentColor" d="m15.097 5.26l.162-.593l-.6.107zm-5.88-.506l.513.09l-.542.427z" /><path fill="currentColor" d="m15.549 2.367l-6.1 1.26a.22.22 0 0 0-.126.077a.25.25 0 0 0-.055.142l-.375 6.685a.24.24 0 0 0 .079.194a.21.21 0 0 0 .195.05l1.698-.414c.16-.038.302.11.27.278l-.505 2.606c-.034.176.122.326.285.274l1.049-.336c.162-.052.319.098.284.274l-.801 4.093c-.05.257.272.396.407.177l.09-.147l4.97-10.464c.084-.175-.06-.375-.242-.338l-1.748.356c-.165.034-.304-.128-.258-.297l1.14-4.173c.047-.17-.093-.331-.257-.297" /></svg>
+)
+
+export const PostgreSQLIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+    <path fill="currentColor" d="M16.805 1a10 10 0 0 0-2.603.37l-.06.018a10.6 10.6 0 0 0-1.615-.151c-1.113-.019-2.07.243-2.84.68c-.76-.256-2.336-.697-3.997-.609c-1.157.061-2.419.402-3.354 1.36c-.933.958-1.426 2.44-1.322 4.457c.028.557.191 1.464.463 2.64c.27 1.175.652 2.55 1.127 3.805s.996 2.384 1.81 3.15c.406.384.965.707 1.624.68c.463-.018.882-.215 1.243-.506c.176.225.364.323.535.414c.215.114.425.192.642.244a4.6 4.6 0 0 0 1.84.091c.267-.043.548-.127.828-.247c.01.302.022.598.035.898c.038.95.063 1.827.357 2.596c.047.126.176.773.687 1.344c.51.572 1.51.928 2.648.692c.803-.167 1.825-.468 2.503-1.404c.67-.926.973-2.254 1.033-4.409c.015-.116.033-.215.052-.308l.16.014h.018c.857.038 1.787-.08 2.564-.43c.688-.31 1.208-.622 1.587-1.177c.095-.137.199-.303.227-.59c.028-.285-.14-.733-.421-.939c-.563-.414-.916-.257-1.295-.18q-.56.12-1.136.133c1.093-1.784 1.876-3.68 2.323-5.358c.264-.99.413-1.903.425-2.701s-.055-1.505-.548-2.117c-1.541-1.91-3.708-2.438-5.384-2.456q-.078-.002-.156-.001zm-.044.587c1.585-.015 3.611.417 5.065 2.22c.327.405.424.997.413 1.727c-.012.729-.151 1.601-.405 2.557c-.493 1.852-1.425 4.01-2.738 5.948a.7.7 0 0 0 .15.079c.274.11.898.204 2.145-.044c.313-.065.543-.108.781.068a.48.48 0 0 1 .173.39a.64.64 0 0 1-.123.308c-.24.351-.716.684-1.326.958c-.539.244-1.313.371-1.999.379c-.344.003-.661-.023-.93-.104l-.018-.006c-.104.971-.343 2.89-.498 3.765c-.125.706-.343 1.267-.76 1.687c-.416.42-1.004.673-1.796.838c-.981.204-1.696-.016-2.157-.393c-.46-.375-.671-.874-.798-1.18c-.087-.21-.132-.483-.176-.848a18 18 0 0 1-.097-1.315a46 46 0 0 1-.028-2.312c-.41.363-.92.605-1.467.696c-.65.107-1.232.002-1.579-.082a2.2 2.2 0 0 1-.49-.185c-.162-.083-.315-.177-.417-.363a.5.5 0 0 1-.054-.35a.56.56 0 0 1 .206-.303c.188-.148.435-.23.808-.306c.68-.135.917-.228 1.061-.339c.123-.095.262-.287.508-.57l-.003-.037a2.9 2.9 0 0 1-1.257-.328c-.141.144-.865.887-1.748 1.917c-.371.431-.781.678-1.214.696s-.824-.194-1.156-.506c-.665-.626-1.195-1.703-1.657-2.92c-.46-1.218-.836-2.574-1.102-3.729c-.268-1.155-.426-2.086-.448-2.535c-.1-1.909.36-3.195 1.15-4.006S4.652 1.94 5.708 1.882c1.894-.106 3.693.535 4.057.673c.701-.462 1.604-.75 2.733-.732a7.2 7.2 0 0 1 1.588.2l.019-.008q.344-.117.698-.196a9.4 9.4 0 0 1 1.957-.23zm.143.614h-.137a8.5 8.5 0 0 0-1.61.176a7.05 7.05 0 0 1 2.692 2.062a7.7 7.7 0 0 1 1.07 1.76c.104.242.174.447.213.605c.02.08.034.147.038.217a.4.4 0 0 1-.011.132l-.006.012c.029.803-.176 1.347-.201 2.113c-.019.556.127 1.209.163 1.92c.034.67-.049 1.405-.497 2.127q.056.066.108.132c1.185-1.81 2.04-3.814 2.495-5.521c.243-.92.373-1.753.384-2.413c.01-.66-.117-1.139-.279-1.338c-1.268-1.573-2.983-1.974-4.422-1.985m-4.525.235c-1.117.002-1.919.33-2.526.82c-.627.507-1.047 1.2-1.323 1.911a7.9 7.9 0 0 0-.485 2.213l.013-.007c.337-.184.78-.367 1.254-.473c.475-.106.986-.139 1.449.035s.846.584.985 1.206c.665 2.986-.207 4.096-.529 4.933a9 9 0 0 0-.312.929q.06-.017.121-.024a1.06 1.06 0 0 1 .51.1c.324.13.546.402.666.714q.047.124.067.26q.02.057.019.117a49 49 0 0 0 .012 3.426c.022.494.054.928.095 1.271c.04.342.098.602.135.69c.12.294.297.678.617.939s.777.434 1.614.26c.726-.151 1.174-.36 1.474-.663c.298-.301.477-.72.591-1.363c.171-.963.515-3.754.556-4.28c-.018-.395.042-.7.172-.932c.135-.238.343-.384.522-.463c.09-.04.174-.066.243-.085a6 6 0 0 0-.23-.298a4 4 0 0 1-.629-1.007a8 8 0 0 0-.243-.443c-.125-.22-.284-.495-.45-.804c-.333-.619-.695-1.369-.883-2.1c-.187-.729-.215-1.484.265-2.017c.426-.473 1.172-.669 2.293-.559c-.033-.096-.053-.176-.109-.304a7 7 0 0 0-.983-1.617c-.95-1.178-2.487-2.346-4.863-2.384h-.108zm-6.276.047q-.18 0-.36.01c-.954.053-1.856.322-2.501.986c-.647.663-1.072 1.751-.98 3.553c.019.34.172 1.296.434 2.43c.262 1.136.634 2.471 1.08 3.65c.446 1.18.988 2.207 1.502 2.693c.259.243.484.341.688.333c.205-.01.451-.124.753-.475a40 40 0 0 1 1.71-1.877a3.2 3.2 0 0 1-.932-1.307a3.1 3.1 0 0 1-.17-1.58c.097-.678.11-1.312.099-1.812c-.012-.488-.048-.812-.048-1.015v-.028a8.8 8.8 0 0 1 .559-3.095c.264-.682.658-1.375 1.249-1.936c-.58-.185-1.61-.467-2.725-.52a7 7 0 0 0-.36-.01zm11.714 4.842c-.641.008-1.001.169-1.19.379c-.268.298-.293.82-.127 1.464s.507 1.365.829 1.963c.16.3.316.57.442.788c.127.22.22.376.276.51q.08.181.168.331c.248-.509.293-1.008.267-1.529c-.033-.644-.187-1.303-.164-1.97c.025-.78.184-1.289.198-1.892a6 6 0 0 0-.699-.044m-7.78.105a2.7 2.7 0 0 0-.582.068a4.5 4.5 0 0 0-1.09.412q-.173.09-.33.209l-.02.018c.006.134.033.459.045.936c.01.523-.002 1.19-.106 1.91c-.226 1.568.946 2.866 2.324 2.868c.08-.322.213-.648.345-.992c.384-1.003 1.139-1.734.503-4.589c-.104-.467-.31-.656-.594-.763a1.4 1.4 0 0 0-.495-.077m7.48.187h.048q.094.003.17.02a.4.4 0 0 1 .13.051a.15.15 0 0 1 .071.1v.008a.2.2 0 0 1-.034.124a.6.6 0 0 1-.104.137a.65.65 0 0 1-.364.195a.57.57 0 0 1-.388-.095a.6.6 0 0 1-.123-.108a.24.24 0 0 1-.06-.116a.15.15 0 0 1 .04-.118a.4.4 0 0 1 .111-.082a1.3 1.3 0 0 1 .504-.118zm-7.388.154q.075 0 .157.012c.144.02.273.057.371.112q.072.037.126.097q.028.033.042.073t.009.083a.27.27 0 0 1-.071.141a.6.6 0 0 1-.135.12a.62.62 0 0 1-.424.103a.7.7 0 0 1-.396-.209a.7.7 0 0 1-.112-.15a.25.25 0 0 1-.039-.162c.014-.1.099-.15.18-.18a.8.8 0 0 1 .29-.036zm8.56 6.732h-.003c-.139.05-.253.07-.35.11a.42.42 0 0 0-.225.197c-.06.105-.11.292-.095.61a.5.5 0 0 0 .14.064c.161.048.432.08.735.075c.602-.007 1.344-.143 1.738-.321c.323-.146.623-.336.891-.564c-1.317.264-2.06.194-2.517.011a1.3 1.3 0 0 1-.314-.183m-7.588.086h-.02c-.05.004-.123.02-.263.172c-.33.358-.444.582-.716.792c-.27.21-.623.321-1.327.461c-.223.044-.35.093-.436.132c.028.022.025.028.066.049c.103.055.236.103.342.13c.303.073.8.159 1.319.073s1.058-.327 1.518-.953c.08-.108.088-.268.023-.44c-.067-.17-.211-.318-.313-.36a.6.6 0 0 0-.193-.054z" />
+  </svg>
+);
+
+export const AWSIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -24,7 +36,7 @@ export const AWSIcon = (props) => (
   </svg>
 );
 
-export const CssIcon = (props) => (
+export const CssIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -38,7 +50,7 @@ export const CssIcon = (props) => (
   </svg>
 );
 
-export const FirebaseIcon = (props) => (
+export const FirebaseIcon = (props: IconProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}>
     <title>{"firebase"}</title>
     <path
@@ -48,21 +60,16 @@ export const FirebaseIcon = (props) => (
   </svg>
 );
 
-export const GitIcon = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 16 16"
-    {...props}
-  >
+export const GitIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path
       className="fill-black dark:fill-white"
-      d="M5.14 4.726A2.5 2.5 0 1 0 3 4.792v6.416a2.5 2.5 0 1 0 2 0V7.414L7.086 9.5h2.622a2.5 2.5 0 1 0 0-2H7.914L5.14 4.726Z"
+      d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441a1.87 1.87 0 0 1 0 2.623c-.595.592-1.548.687-2.25-.174l-2.58-2.579v6.765a1.867 1.867 0 0 1 .501 1.046 1.854 1.854 0 0 1-3.137 1.294 1.854 1.854 0 0 1 0-2.622 1.848 1.848 0 0 1 1.05-.461V6.226L.451 10.93c-.603.604-.603 1.582 0 2.187l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.186"
     />
   </svg>
 );
 
-export const GitHubIcon = (props) => (
+export const GitHubIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -75,7 +82,7 @@ export const GitHubIcon = (props) => (
   </svg>
 );
 
-export const FigmaIcon = (props) => (
+export const FigmaIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -92,7 +99,7 @@ export const FigmaIcon = (props) => (
   </svg>
 );
 
-export const HtmlIcon = (props) => (
+export const HtmlIcon = (props: IconProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 20 20" {...props}>
     <title>{"html [#124]"}</title>
     <path
@@ -103,7 +110,7 @@ export const HtmlIcon = (props) => (
   </svg>
 );
 
-export const JavaScriptIcon = (props) => (
+export const JavaScriptIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -117,7 +124,7 @@ export const JavaScriptIcon = (props) => (
   </svg>
 );
 
-export const MongodbIcon = (props) => (
+export const MongodbIcon = (props: IconProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}>
     <path
       className="fill-black dark:fill-white"
@@ -126,7 +133,7 @@ export const MongodbIcon = (props) => (
   </svg>
 );
 
-export const MysqlIcon = (props) => (
+export const MysqlIcon = (props: IconProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path
       className="fill-black dark:fill-white"
@@ -135,7 +142,7 @@ export const MysqlIcon = (props) => (
   </svg>
 );
 
-export const NextjsIcon = (props) => (
+export const NextjsIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
@@ -149,7 +156,7 @@ export const NextjsIcon = (props) => (
   </svg>
 );
 
-export const NodeIcon = (props) => (
+export const NodeIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -163,7 +170,7 @@ export const NodeIcon = (props) => (
   </svg>
 );
 
-export const PythonIcon = (props) => (
+export const PythonIcon = (props: IconProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...props}>
     <title>{"python [#127]"}</title>
     <path
@@ -174,7 +181,7 @@ export const PythonIcon = (props) => (
   </svg>
 );
 
-export const ReactIcon = (props) => (
+export const ReactIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -190,7 +197,7 @@ export const ReactIcon = (props) => (
   </svg>
 );
 
-export const TailwindIcon = (props) => (
+export const TailwindIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -203,7 +210,7 @@ export const TailwindIcon = (props) => (
   </svg>
 );
 
-export const TypeScriptIcon = (props) => (
+export const TypeScriptIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -217,7 +224,7 @@ export const TypeScriptIcon = (props) => (
   </svg>
 );
 
-export const ExpressIcon = (props) => (
+export const ExpressIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="128"
@@ -232,31 +239,19 @@ export const ExpressIcon = (props) => (
   </svg>
 );
 
-export const PostmanIcon = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    {...props}
-  >
-    <path
-      className="fill-black dark:fill-white"
-      d="M19.914 5.888C16.54 1.518 10.26.71 5.888 4.086C1.518 7.46.71 13.74 4.086 18.112c3.375 4.37 9.655 5.178 14.026 1.802l.002-.002c4.369-3.376 5.175-9.654 1.8-14.024m-2.559 2.495l-.78-.768l-.169-.168l.047-.047l1.184-1.118c.212.257.328.58.328.915c-.001.39-.157.765-.434 1.041q-.083.08-.176.145M6.698 16.738l.139.13l.725.725l-1.614-.105zM16.49 5.73c.325.002.641.11.9.308l-1.3 1.308a.14.14 0 0 0-.043.059l-.001.005l-.002.006a.13.13 0 0 0 .045.139l.984.983a1.46 1.46 0 0 1-1.616-.308a1.47 1.47 0 0 1-.315-1.594a1.46 1.46 0 0 1 1.348-.906m-.909 3.266a.46.46 0 0 1-.158.334l-3.895 3.389l-.013.011l-.142-.142l-.062-.062l-.03-.03l-.087-.087l-.033-.033l-.067-.067l3.687-3.654a.46.46 0 0 1 .585-.06a.5.5 0 0 1 .074.06l.037.038q.048.072.083.15q.023.075.021.153m-4.498 3.74l.007.019l.034.033l.146.143l-.054.007l-.809.099l.1-.1l.391-.39zm3.93-4.499a.76.76 0 0 0-.44.218l-3.675 3.658l-.72-.72c1.905-1.898 3.07-2.888 3.795-3.213a.9.9 0 0 1 1.04.057m-5.048 3.368l.015.015l.595.595l-1.552.332zm-2.033 4.858a.23.23 0 0 0-.125.266l.166.725a.05.05 0 0 1 0 .059a.05.05 0 0 1-.066 0l-.984-.992l3.03-3.075l1.569-.243l.576.576a20.5 20.5 0 0 1-4.166 2.684m4.441-2.9l-.608-.608l3.829-3.358c-.272 1.08-1.716 2.544-3.221 3.966m5.275-6.55a.125.125 0 0 0-.159-.05a.117.117 0 0 0-.05.158a.36.36 0 0 1-.041.376a.1.1 0 0 0-.031.079q0 .046.03.079a.1.1 0 0 0 .067 0a.11.11 0 0 0 .109-.033a.57.57 0 0 0 .075-.609"
-    />
-  </svg>
+export const curlIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" {...props}><path fill="currentColor" d="M328.712 115.557c15.126-3.33 27.726-16.16 28.662-33.992c1.51-28.784-28.482-49.182-53.858-36.628c-17.732 8.772-23.983 29.074-18.008 46.049L107.585 395.995c-15.841 3.29-29.218 16.599-30.208 34.93c-1.564 28.966 28.955 48.91 54.802 35.811c18.014-9.128 24.412-29.571 18.426-46.499zm2.321-54.69c13.488 8.16 13.543 27.972.098 35.576c-13.445 7.605-30.397-2.65-30.44-18.414s16.854-25.321 30.342-17.162M104.76 450.14c-13.728-7.914-13.728-27.806 0-35.72s30.98 2.032 30.98 17.86s-17.253 25.774-30.98 17.86M18.848 216.802c25.131 14.488 56.716-3.72 56.716-32.697s-31.585-47.185-56.716-32.697c-25.13 14.488-25.13 50.906 0 65.394m8.592-50.557c13.727-7.914 30.98 2.032 30.98 17.86s-17.253 25.774-30.98 17.86s-13.728-27.806 0-35.72m133.594-25.63c25.131 14.489 56.715-3.72 56.715-32.697s-31.584-47.185-56.715-32.697c-25.13 14.489-25.13 50.906 0 65.394m8.591-50.557c13.728-7.914 30.98 2.032 30.98 17.86s-17.252 25.775-30.98 17.86c-13.727-7.913-13.727-27.806 0-35.72M18.85 283.424c-25.13 14.489-25.13 50.906 0 65.394c25.131 14.489 56.716-3.72 56.716-32.697s-31.585-47.185-56.716-32.697m8.592 50.558c-13.728-7.914-13.728-27.807 0-35.72s30.98 2.031 30.98 17.86s-17.253 25.774-30.98 17.86M511.43 73.299c-4.906-28.403-38.674-41.646-60.637-23.78c-13.096 10.652-16.185 27.643-10.853 41.861L262.69 395.135c-16.372 3.173-30.185 17.054-30.76 35.934c-.884 28.991 30.098 48.2 55.633 34.491c17.32-9.297 23.387-29.046 17.817-45.563l177.85-304.565c18.085-3.916 31.775-21.437 28.2-42.133m-31.151-13.588c15.092 4.827 19.345 24.282 7.638 34.934c-11.708 10.652-30.675 4.584-34.06-10.895c-3.384-15.48 11.33-28.867 26.422-24.04M279.455 450.455c-13.945 7.487-30.866-3.004-30.383-18.837c.482-15.833 18.009-25.242 31.472-16.895s12.857 28.246-1.089 35.732" /></svg>
 );
 
-export const ShadcnIcon = (props) => (
+export const ShadcnIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="32"
     height="32"
     viewBox="0 0 32 32"
     {...props}
-    className={`stroke-black dark:stroke-white transition-colors ${
-      props.className || ""
-    }`}
+    className={`stroke-black dark:stroke-white transition-colors ${props.className || ""
+      }`}
   >
     <path
       stroke="currentColor"
@@ -267,16 +262,15 @@ export const ShadcnIcon = (props) => (
   </svg>
 );
 
-export const ExpoIcon = (props) => (
+export const ExpoIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="457"
     height="512"
     viewBox="0 0 457 512"
     {...props}
-    className={`stroke-black dark:stroke-white transition-colors ${
-      props.className || ""
-    }`}
+    className={`stroke-black dark:stroke-white transition-colors ${props.className || ""
+      }`}
   >
     <path
       fill="currentColor"
@@ -285,22 +279,21 @@ export const ExpoIcon = (props) => (
   </svg>
 );
 
-export const VercelIcon = (props) => (
+export const VercelIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     {...props}
-    className={`stroke-black dark:stroke-white transition-colors ${
-      props.className || ""
-    }`}
+    className={`stroke-black dark:stroke-white transition-colors ${props.className || ""
+      }`}
   >
     <path fill="currentColor" d="M23 21.648H1L12 2.352z" />
   </svg>
 );
 
-export const RenderIcon = (props) => (
+export const RenderIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -316,7 +309,7 @@ export const RenderIcon = (props) => (
   </svg>
 );
 
-export const PHPIcon = (props) => (
+export const PHPIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -332,27 +325,39 @@ export const PHPIcon = (props) => (
   </svg>
 );
 
-export const SQLIcon = (props) => (
+export const SQLIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    fill="none"
     viewBox="0 0 24 24"
     {...props}
-    className={` transition-colors ${props.className || ""}`}
   >
+    <ellipse
+      cx="12"
+      cy="5.5"
+      rx="7"
+      ry="2.5"
+      className="stroke-black dark:stroke-white"
+      strokeWidth={2}
+    />
     <path
-      fill="none"
-      stroke="currentColor"
+      className="stroke-black dark:stroke-white"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="2"
-      d="M12 8a2 2 0 0 1 2 2v4a2 2 0 1 1-4 0v-4a2 2 0 0 1 2-2m5 0v8h4m-8-1l1 1M3 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1"
+      strokeWidth={2}
+      d="M5 5.5v13c0 1.38 3.13 2.5 7 2.5s7-1.12 7-2.5v-13"
+    />
+    <path
+      className="stroke-black dark:stroke-white"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M5 12c0 1.38 3.13 2.5 7 2.5s7-1.12 7-2.5"
     />
   </svg>
 );
 
-export const CanvaIcon = (props) => (
+export const CanvaIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -368,7 +373,7 @@ export const CanvaIcon = (props) => (
   </svg>
 );
 
-export const VSCIcon = (props) => (
+export const VSCIcon = (props: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -380,6 +385,46 @@ export const VSCIcon = (props) => (
     <path
       fill="currentColor"
       d="m21.289 4.156l-4.114-1.979a1.24 1.24 0 0 0-1.422.24L7.872 9.608L4.438 7a.83.83 0 0 0-1.064.046l-1.1 1a.83.83 0 0 0 0 1.231L5.249 12l-2.978 2.718a.83.83 0 0 0 0 1.231l1.1 1A.83.83 0 0 0 4.438 17l3.434-2.608l7.884 7.194a1.24 1.24 0 0 0 1.42.24l4.118-1.982A1.25 1.25 0 0 0 22 18.715V5.281a1.25 1.25 0 0 0-.709-1.126ZM17 16.542L11.019 12L17 7.46Z"
+    />
+  </svg>
+);
+
+export const UiUxDesignIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" {...props}><path fill="currentColor" d="M13.747 2.226H2.378a.904.904 0 0 0-.904.904v9.302a.904.904 0 0 0 .904.904h11.368a.904.904 0 0 0 .904-.904V3.13a.904.904 0 0 0-.904-.904m-11.368.775h11.368a.13.13 0 0 1 .129.13v2.712H2.249V3.13A.13.13 0 0 1 2.378 3m-.129 9.431V6.616h3.876v5.943H2.379a.13.13 0 0 1-.13-.129m11.497.129H6.899V6.617h6.976v5.814a.13.13 0 0 1-.129.129"/></svg>
+);
+
+export const PrototypingIcon = (props: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M9 12H6.732a2 2 0 1 1 0-2H9V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2zm2 0v7h8V5h-8v5h2.268a2 2 0 1 1 0 2z"/></svg>
+);
+
+export const UsabilityTestingIcon = (props: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <rect
+      x="4"
+      y="3"
+      width="16"
+      height="18"
+      rx="2"
+      className="stroke-black dark:stroke-white"
+      strokeWidth={2}
+    />
+    <path
+      className="stroke-black dark:stroke-white"
+      strokeLinecap="round"
+      strokeWidth={2}
+      d="M8 3v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V3"
+    />
+    <path
+      className="stroke-black dark:stroke-white"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M8 14v3M12 11v6M16 13v4"
     />
   </svg>
 );

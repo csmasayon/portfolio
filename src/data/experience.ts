@@ -1,57 +1,82 @@
-import { Experience } from "@/types/experience";
+import { ExperienceItem } from "@/types/experience";
 
-export const experience: Experience[] = [
-    {
-      year: 2025,
-      items: [
-        {
-          title: "UI/UX Designer",
-          period: "Nov 2025 - Present",
-          subheading: "BetterGov.ph · Volunteer · Remote",
-          location: "Philippines",
-          description:
-            "Currently volunteering for BetterGov.ph.",
-        },
-      ],
+export const experience: ExperienceItem[] = [
+  {
+    title: "Administrative Officer II (IT Officer)",
+    period: "April 2026 - Present",
+    startYear: 2026,
+    company: "Department of Human Settlements and Urban Development Region 11",
+    employmentType: "Permanent",
+    workMode: "Onsite",
+    location: "Davao, Philippines",
+    tags: ["Network Administration", "Internal Tools", "Documentation", "UI Design", "UX Design", "Prototyping", "Web Development", "React", "Vite", "Tailwind CSS", "TypeScript", "Figma"],
+    highlights: [
+      "Provide ICT support for daily office operations, including troubleshooting, network administration, and user support.",
+      "Develop internal tools for IT support, asset tracking, reporting, and documentation.",
+      "Improve efficiency, accountability, and service delivery through process improvements.",
+    ],
+  },
+  {
+    title: "UI/UX Designer",
+    period: "Nov 2025 - April 2026",
+    startYear: 2025,
+    company: "BetterGov.ph",
+    employmentType: "Volunteer",
+    workMode: "Remote",
+    tags: ["UI Design", "UX Design", "Prototyping", "Web Development", "Figma"],
+    highlights: [
+      "Designed user interfaces for civic-tech initiatives aimed at improving government digital services.",
+      "Created wireframes, mockups, and user flows in Figma for platform features and pages.",
+      "Collaborated remotely with the team to refine layouts, navigation, and visual consistency.",
+    ],
+  },
+  {
+    title: "Programmer 1",
+    period: "Nov 2024 - Dec 2024",
+    startYear: 2024,
+    company: "University of the Philippines Mindanao School of Management",
+    employmentType: "Contract",
+    workMode: "Onsite",
+    location: "Davao, Philippines",
+    tags: ["WordPress", "Elementor", "AWS", "Cloud Hosting", "Web Development"],
+    link: {
+      href: "/projects/upmin-som-website",
+      label: "View case study",
     },
-    {
-      year: 2024,
-      items: [
-        {
-          title: "Programmer 1",
-          period: "Nov 2024 - Dec 2024",
-          subheading:
-            "University of the Philippines Mindanao School of Management · Contract · Onsite",
-          location: "Davao, Philippines",
-          description:
-            "As Programmer 1, I contributed to enhancing the BS Agribusiness Economics Program at UP Mindanao's School of Management. I created and deployed the SOM website with comprehensive information on personnel, program offerings, and activities to ensure accessibility and relevance. I also developed dedicated pages for the SOM College Secretary's services, streamlining access to essential resources and improving user experience. Additionally, I trained faculty and administrative staff, equipping them with the skills to maintain and update the site for long-term sustainability.",
-        },
-      ],
-    },
-    {
-      year: 2023,
-      items: [
-        {
-          title: "Mobile Development Intern",
-          period: "Jul 2023 - Aug 2023",
-          subheading: "PASYENTE Project for Dengue · Internship · Hybrid",
-          location: "Davao, Philippines",
-          description:
-            "As a Mobile Development Intern, I participated in the frontend development of the PASYENTE Project for Dengue's mobile application. I designed and implemented user-friendly interfaces, ensuring a seamless user experience and optimizing the app's performance.",
-        },
-      ],
-    },
-    {
-      year: 2022,
-      items: [
-        {
-          title: "Web Development Intern",
-          period: "Feb 2022 - Jun 2022",
-          subheading: "Haw's · Internship · Hybrid",
-          location: "Davao, Philippines",
-          description:
-            "As a Web Development Intern, I contributed to the overall redesign of the company website by collaborating with the team using Figma. I focused on enhancing user experience and functionality, creating a more intuitive and visually appealing interface.",
-        },
-      ],
-    },
-  ];
+    highlights: [
+      "Built and deployed the SOM website with program info, personnel, and activity pages.",
+      "Developed dedicated College Secretary service pages to streamline access to resources.",
+      "Trained faculty and staff on maintaining and updating the site for long-term sustainability.",
+    ],
+  },
+  {
+    title: "Mobile Development Intern",
+    period: "Jul 2023 - Aug 2023",
+    startYear: 2023,
+    company: "PASYENTE Project for Dengue",
+    employmentType: "Internship",
+    workMode: "Hybrid",
+    location: "Davao, Philippines",
+    tags: ["Flutter", "Dart", "Mobile Development", "UX Design", "UI Design"],
+    highlights: [
+      "Contributed to frontend development of a dengue-focused mobile application.",
+      "Designed and implemented user-friendly interfaces for patient-facing features.",
+      "Helped optimize app performance and overall user experience.",
+    ],
+  },
+  {
+    title: "Web Development Intern",
+    period: "Feb 2022 - Jun 2022",
+    startYear: 2022,
+    company: "haws",
+    employmentType: "Internship",
+    workMode: "Hybrid",
+    location: "Davao, Philippines",
+    tags: ["Figma", "Web Design", "UX Design", "UI Design"],
+    highlights: [
+      "Collaborated on a full website redesign using Figma.",
+      "Improved user experience and visual design across key pages and flows.",
+      "Focused on making the interface more intuitive and visually appealing.",
+    ],
+  },
+];

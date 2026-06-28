@@ -12,13 +12,11 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import { getProjectMetadata } from "@/lib/metadata";
+import { PageContainer } from "@/components/page-container";
+import { getProjectSlugs } from "@/lib/projects";
 
 export async function generateStaticParams() {
-  return [
-    { slug: "upmin-som-website" },
-    { slug: "trabahanap" },
-    { slug: "pfats" },
-  ];
+  return getProjectSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -60,44 +58,45 @@ export default async function ProjectPage({
 }) {
   const { slug } = await params;
 
+  let mdxModule;
   try {
-    const mdxModule = await import(`@/content/projects/${slug}.mdx`);
-    const mdxMetadata = mdxModule.metadata || {};
-
-    const ProjectContent = mdxModule.default;
-
-    return (
-      <div className="max-w-6xl mt-4 sm:mt-8 mb-8 mx-6 sm:mx-4 md:mx-auto md:px-6 lg:px-8 space-y-8">
-        <Breadcrumb>
-          <BreadcrumbList className="mb-4">
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/projects">projects</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <SlashIcon />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>{mdxMetadata.title || slug}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-        <article className="prose prose-lg dark:prose-invert max-w-none">
-          <ProjectContent />
-        </article>
-        <div className="flex justify-center">
-          <Button className="mt-4 align-center" asChild>
-            <Link href="/projects">
-              <ArrowLeft />
-              Back to Projects
-            </Link>
-          </Button>
-        </div>
-      </div>
-    );
+    mdxModule = await import(`@/content/projects/${slug}.mdx`);
   } catch (error) {
     console.error("Error rendering project page:", error);
     notFound();
   }
+
+  const mdxMetadata = mdxModule.metadata || {};
+  const ProjectContent = mdxModule.default;
+
+  return (
+    <PageContainer className="mt-4 sm:mt-8 mb-8 space-y-8">
+      <Breadcrumb>
+        <BreadcrumbList className="mb-4">
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/projects">projects</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>{mdxMetadata.title || slug}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <article className="prose prose-lg dark:prose-invert max-w-none">
+        <ProjectContent />
+      </article>
+      <div className="flex justify-center">
+        <Button className="mt-4 align-center" asChild>
+          <Link href="/projects">
+            <ArrowLeft />
+            Back to Projects
+          </Link>
+        </Button>
+      </div>
+    </PageContainer>
+  );
 }

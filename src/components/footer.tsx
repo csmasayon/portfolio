@@ -1,12 +1,13 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { PageContainer } from "./page-container";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="w-full">
-      <div className="max-w-6xl mt-6 mb-6 mx-6 sm:mx-4 md:mx-auto md:px-6 lg:px-8">
+      <PageContainer className="mt-6 mb-6">
         <div className="border-t space-y-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-4 mb-4">
             <div className="text-center sm:text-left">
@@ -17,6 +18,7 @@ export default function Footer() {
                 href="https://github.com/csmasayon"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub profile"
               >
                 <Github />
               </Link>
@@ -24,6 +26,7 @@ export default function Footer() {
                 href="https://linkedin.com/in/christian-ace-masayon"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
               >
                 <Linkedin />
               </Link>
@@ -31,13 +34,14 @@ export default function Footer() {
                 href="mailto:casmasayon@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Email Christian Ace Masayon"
               >
                 <Mail />
               </Link>
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </footer>
   );
 }
