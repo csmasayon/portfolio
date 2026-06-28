@@ -1,122 +1,107 @@
-# Portfolio Website
+# Christian Ace Masayon — Portfolio
 
-A modern, responsive portfolio website built with Next.js
+Personal portfolio site for [csmasayon.com](https://csmasayon.com). Built with Next.js App Router, MDX case studies, and a content-driven data layer so projects, experience, and education stay easy to update.
 
-## 🛠️ Tech Stack
+## Features
 
-### Core
-- **Next.js** - React framework with App Router
-- **React** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS framework
+- **Home** — hero, experience preview, featured projects, skills, contact CTA
+- **About** — intro, story, full experience timeline, education
+- **Projects** — listing page + MDX case studies (`/projects/[slug]`)
+- **Dark / light mode** — system-aware theme toggle
+- **SEO** — metadata helpers, sitemap, robots.txt, dynamic OG images, Person JSON-LD
+- **Responsive layout** — mobile menu, wide `PageContainer` layout on desktop
+- **Analytics** — Vercel Analytics
 
-### UI & Styling
-- **Radix UI** - Accessible component primitives
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
+## Tech stack
 
-### Content & SEO
-- **MDX** - Markdown with JSX support
-- **next/og** - Dynamic OG image generation
-- **Vercel Analytics** - Performance monitoring
+| Layer | Tools |
+| --- | --- |
+| Framework | Next.js 16, React 19, TypeScript |
+| Styling | Tailwind CSS 4, shadcn/ui, Radix UI |
+| Content | MDX (`@next/mdx`) |
+| Motion | Framer Motion |
+| Icons | Lucide React, custom SVG skill icons |
+| Deploy | Vercel (recommended) |
 
-### Development
-- **ESLint** - Code linting
-- **TypeScript ESLint** - TypeScript-specific linting
-- **Dependabot** - Automated dependency updates
-
-## 📁 Project Structure
+## Project structure
 
 ```
-portfolio/
-├── src/
-│ ├── app/ # Next.js App Router
-│ │ ├── api/
-│ │ │ └── og/
-│ │ │ └── route.tsx # Dynamic OG image generation
-│ │ ├── about/ # About page
-│ │ ├── projects/ # Projects listing & detail pages
-│ │ │ ├── [slug]/ # Dynamic project pages (MDX)
-│ │ │ └── page.tsx # Projects listing page
-│ │ ├── globals.css # Global styles & theme
-│ │ ├── layout.tsx # Root layout with metadata
-│ │ ├── page.tsx # Home page
-│ │ ├── robots.ts # Robots.txt generation
-│ │ └── sitemap.ts # Sitemap generation
-│ ├── components/ # React components
-│ │ ├── svg/ # SVG icon components
-│ │ ├── ui/ # Reusable UI components (shadcn/ui)
-│ │ ├── education-card.tsx # Education card component
-│ │ ├── experience-card.tsx # Experience card component
-│ │ ├── project-card.tsx # Project card component
-│ │ ├── footer.tsx # Site footer
-│ │ ├── header.tsx # Navigation header
-│ │ ├── mobile-menu.tsx # Mobile navigation
-│ │ ├── page-transition.tsx # Page transition animations
-│ │ ├── theme-toggle.tsx # Theme switcher
-│ │ └── theme-provider.tsx # Theme context provider
-│ ├── content/ # MDX content files
-│ │ └── projects/ # Project markdown files
-│ ├── data/ # TypeScript data files
-│ │ ├── projects.ts # Projects data
-│ │ ├── experience.ts # Work experience data
-│ │ └── education.ts # Education data
-│ ├── types/ # TypeScript type definitions
-│ │ ├── projects.ts # Project types
-│ │ ├── experience.ts # Experience types
-│ │ └── education.ts # Education types
-│ └── lib/ # Utilities
-│ ├── metadata.ts # SEO metadata helpers
-│ ├── projects.ts # Project data helpers
-│ └── utils.ts # General utilities
-├── public/
-│ ├── images/ # Static images (logo, projects, portrait)
-│ └── docs/ # Documents (resume PDF)
-├── .github/
-│ └── dependabot.yml # Dependabot configuration
-└── package.json
+src/
+├── app/                  # Routes (App Router)
+│   ├── page.tsx          # Home
+│   ├── about/            # About page
+│   ├── projects/         # Projects list + [slug] case studies
+│   └── api/og/           # Dynamic Open Graph image
+├── components/           # UI and page sections
+├── content/projects/     # MDX case study files
+├── data/                 # projects, experience, education, skills
+├── types/                # Shared TypeScript types
+└── lib/                  # metadata, project helpers, utils
+
+public/
+├── images/               # Logos, portrait, project screenshots
+└── docs/                 # Resume PDF
 ```
 
-## 🚀 Getting Started
+## Getting started
 
-### Prerequisites
+**Requirements:** Node.js 18+, [pnpm](https://pnpm.io/) (recommended)
 
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
 ```bash
 git clone https://github.com/csmasayon/portfolio.git
 cd portfolio
-```
-2. **Install dependencies**
-```bash
 pnpm install
-# or
-npm install
-```
-3. **Run the development server**
-```bash
 pnpm dev
-# or
-npm run dev
 ```
-4. **Access the application at [http://localhost:3000](http://localhost:3000)**
 
-## 📝 Available Scripts
+Open [http://localhost:3000](http://localhost:3000).
 
-- `pnpm dev` - Start development server with hot reload
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
+### Scripts
 
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Development server |
+| `pnpm build` | Production build |
+| `pnpm start` | Run production build locally |
+| `pnpm lint` | ESLint |
 
-## 📄 License
+## Updating content
 
-This project is private and for portfolio purposes.
+Most site copy lives in typed data files — no need to touch components for routine updates.
+
+| What to change | File |
+| --- | --- |
+| Work experience | `src/data/experience.ts` |
+| Education | `src/data/education.ts` |
+| Project cards (listing) | `src/data/projects.ts` |
+| Project case study (long form) | `src/content/projects/*.mdx` |
+| Skills | `src/data/skills.ts` |
+| Site metadata / SEO defaults | `src/lib/metadata.ts` |
+| Resume | `public/docs/MASAYON-Resume.pdf` |
+| Portrait & assets | `public/images/` |
+
+### Adding a project
+
+1. Add an entry to `src/data/projects.ts` (title, description, image, links, `featured`, etc.).
+2. Create `src/content/projects/your-slug.mdx` for the case study page.
+3. Use the same slug in `readMoreHref` (e.g. `/projects/your-slug`).
+
+Project slugs for static generation are derived from `projects.ts` via `getProjectSlugs()`.
+
+## Deployment
+
+Deploy to Vercel (or any Node host that supports Next.js):
+
+```bash
+pnpm build
+```
+
+**Note:** Static assets in `public/` are case-sensitive on Linux. Use lowercase filenames in code and git (e.g. `portrait.png`, not `portrait.PNG`).
+
+## License
+
+Private — portfolio use only.
 
 ---
 
-Built with ❤️ by Christian Ace Masayon
+Built by [Christian Ace Masayon](https://csmasayon.com)
