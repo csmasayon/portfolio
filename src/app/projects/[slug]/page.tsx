@@ -70,7 +70,7 @@ export default async function ProjectPage({
   const ProjectContent = mdxModule.default;
 
   return (
-    <PageContainer className="mt-4 sm:mt-8 mb-8 space-y-8">
+    <PageContainer className="mt-4 sm:mt-8 min-[1920px]:mt-10 mb-8 min-[1920px]:mb-14 space-y-8 min-[1920px]:space-y-12">
       <Breadcrumb>
         <BreadcrumbList className="mb-4">
           <BreadcrumbItem>

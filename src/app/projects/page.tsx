@@ -9,7 +9,7 @@ export default function Projects() {
   const projects = getAllProjects();
 
   return (
-    <PageContainer className="mt-4 sm:mt-8 mb-8 space-y-8">
+    <PageContainer className="mt-4 sm:mt-8 min-[1920px]:mt-10 mb-8 min-[1920px]:mb-14 space-y-8 min-[1920px]:space-y-12">
       <section id="projects" className="space-y-4 text-center sm:text-left">
         <h1 className="scroll-m-20 text-3xl font-bold tracking-tight text-balance sm:text-4xl">
           Projects
@@ -21,7 +21,7 @@ export default function Projects() {
       </section>
 
       <section id="projects-list">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 min-[1920px]:gap-6">
           {projects.map((project) => (
             <ProjectCard
               key={project.readMoreHref}

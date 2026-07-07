@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export function ContactCta() {
   return (
     <section id="contact">
-      <div className="rounded-xl border bg-card p-6 text-center shadow-sm sm:p-8">
+      <div className="rounded-xl border bg-card p-6 text-center shadow-sm sm:p-8 min-[1920px]:p-10">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
           Let&apos;s work together
         </h2>

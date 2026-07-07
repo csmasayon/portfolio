@@ -12,7 +12,7 @@ export const metadata = getAboutMetadata();
 
 export default function About() {
   return (
-    <PageContainer className="mt-4 sm:mt-8 mb-8 space-y-8 sm:space-y-10">
+    <PageContainer className="mt-4 sm:mt-8 min-[1920px]:mt-10 mb-8 min-[1920px]:mb-14 space-y-8 sm:space-y-10 min-[1920px]:space-y-14">
       <AboutIntro />
 
       <section id="about-me">

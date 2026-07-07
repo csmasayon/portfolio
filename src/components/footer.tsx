@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Github, Linkedin } from "@/components/icons/brand-icons";
 import Link from "next/link";
 import { PageContainer } from "./page-container";
 
@@ -7,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full">
-      <PageContainer className="mt-6 mb-6">
+      <PageContainer className="mt-6 mb-6 min-[1920px]:mt-10 min-[1920px]:mb-10">
         <div className="border-t space-y-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-4 mb-4">
             <div className="text-center sm:text-left">

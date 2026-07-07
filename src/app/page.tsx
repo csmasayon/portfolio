@@ -16,7 +16,7 @@ export default function Home() {
   const recentExperience = experience.slice(0, 2);
 
   return (
-    <PageContainer className="mt-4 sm:mt-8 mb-8 space-y-8 sm:space-y-10">
+    <PageContainer className="mt-4 sm:mt-8 min-[1920px]:mt-10 mb-8 min-[1920px]:mb-14 space-y-8 sm:space-y-10 min-[1920px]:space-y-14">
       <HomeHero />
       <ExperiencePreview items={recentExperience} />
       <section id="projects">
@@ -31,7 +31,7 @@ export default function Home() {
             View all →
           </Link>
         </div>
-        <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 min-[1920px]:gap-6">
           {featuredProjects.map((project) => (
             <ProjectCard
               key={project.readMoreHref}

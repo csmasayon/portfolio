@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
+import { Github, Linkedin } from "@/components/icons/brand-icons";
 import { Button } from "@/components/ui/button";
 import { TypewriterRole } from "@/components/typewriter-role";
 
 export function HomeHero() {
   return (
-    <section id="home" className="py-6 sm:py-10">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-10 lg:max-w-6xl lg:gap-12">
+    <section id="home" className="py-6 sm:py-10 2xl:py-12 min-[1920px]:py-16">
+      <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-12 2xl:gap-14 min-[2560px]:gap-16">
         <div className="order-2 flex flex-col gap-6 md:order-1">
           <div className="space-y-3 text-center md:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -80,7 +81,7 @@ export function HomeHero() {
             alt="Christian Ace Masayon"
             width={280}
             height={280}
-            className="h-auto w-48 rounded-2xl sm:w-56 lg:w-64"
+            className="h-auto w-48 rounded-2xl sm:w-56 lg:w-64 2xl:w-72"
             priority
           />
         </div>
